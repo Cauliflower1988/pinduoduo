@@ -88,4 +88,8 @@ export class AppComponent {
       link: ''
     }
   ];
+  /**
+   * 定义一个成员变量，用于标识当前选中的菜单项在数组中的索引
+   */
+  selectedIndex = -1;
 }
