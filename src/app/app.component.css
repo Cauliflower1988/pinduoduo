@@ -1,0 +1,15 @@
+ul {
+  text-align: center;
+  background: red;
+  margin: 0;
+}
+
+ul li {
+  display: inline-block;
+  margin: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
