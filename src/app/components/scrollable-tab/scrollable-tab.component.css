@@ -1,7 +1,6 @@
 ul {
   /* 下面的让 UL 列表变成横向，但在 flex 模式下就没有什么作用了 */
   /* text-align: center; */
-  background: #cc483a;
   margin: 0;
   padding: 0;
   /* 支持横向滚动 */
@@ -15,24 +14,19 @@ ul {
 /*
  * 改为纵向的 Flex 容器，布局菜单和下方的指示器
  */
-ul li.menu-item {
+ul li.tab-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
-  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
   /* 内容不折行显示 */
   white-space: nowrap;
 }
 
 a {
-  color: #f5bd96;
   /* 不显示下划线 */
   text-decoration: none;
-}
-
-.active {
-  color: #fff;
 }
 
 /* 不显示滚动条，只对基于 Webkit 内核的浏览器有效 */
@@ -42,7 +36,6 @@ a {
 /* 菜单下方的指示器 */
 .indicator {
   height: 2px;
-  background: #fff;
   width: 2rem;
   margin: 2px 0px 0px 0px;
   padding: 0;

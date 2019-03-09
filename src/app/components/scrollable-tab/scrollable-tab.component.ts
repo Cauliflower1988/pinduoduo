@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 /**
  * 定义菜单数据类型
+ * export 是导出这个类型，以便外部可以使用
+ * 使用 F2 进行重命名
  */
-interface TopMenu {
+export interface TabItem {
   title: string;
   link: string;
 }
@@ -15,88 +17,25 @@ interface TopMenu {
 })
 export class ScrollableTabComponent implements OnInit {
   /**
-   * 声明类型的好处是，可以及时的提示错误，可以试着改变下面的 title 或 link 的值类型
-   * 看 VS Code 中的提示
-   */
-  topMenus: TopMenu[] = [
-    {
-      title: '热门',
-      link: ''
-    },
-    {
-      title: '男装',
-      link: ''
-    },
-    {
-      title: '百货',
-      link: ''
-    },
-    {
-      title: '运动',
-      link: ''
-    },
-    {
-      title: '手机',
-      link: ''
-    },
-    {
-      title: '家纺',
-      link: ''
-    },
-    {
-      title: '食品',
-      link: ''
-    },
-    {
-      title: '电器',
-      link: ''
-    },
-    {
-      title: '鞋包',
-      link: ''
-    },
-    {
-      title: '汽车',
-      link: ''
-    },
-    {
-      title: '水果',
-      link: ''
-    },
-    {
-      title: '电脑',
-      link: ''
-    },
-    {
-      title: '内衣',
-      link: ''
-    },
-    {
-      title: '家装',
-      link: ''
-    },
-    {
-      title: '母婴',
-      link: ''
-    },
-    {
-      title: '美妆',
-      link: ''
-    },
-    {
-      title: '家具',
-      link: ''
-    }
-  ];
-  /**
    * 定义一个成员变量，用于标识当前选中的菜单项在数组中的索引
    */
   selectedIndex = 0;
-
-  selectMenu(idx: number) {
-    this.selectedIndex = idx;
-  }
+  /**
+   * 声明类型的好处是，可以及时的提示错误，可以试着改变下面的 title 或 link 的值类型
+   * 看 VS Code 中的提示
+   */
+  @Input() tabItems: TabItem[] = [];
+  @Input() backgroundColor = '#cc483a';
+  @Input() titleColor = '#f5bd96';
+  @Input() titleActiveColor = '#fff';
+  @Input() indicatorColor = '#fff';
+  @Output() tabSelected = new EventEmitter<TabItem>();
   constructor() {}
 
   ngOnInit() {}
+
+  selectTab(idx: number) {
+    this.selectedIndex = idx;
+    this.tabSelected.emit(this.tabItems[this.selectedIndex]);
+  }
 }

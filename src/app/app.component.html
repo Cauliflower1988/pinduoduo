@@ -1,3 +1,22 @@
 <!-- 使用在 ScrollableTabComponent 中注解中定义的 selector -->
 <!-- 可以理解成我们创建了一个自定义的 HTML 标签 -->
-<app-scrollable-tab></app-scrollable-tab>
+<!-- 我们定义在 ScrollableTabComponent 的 @Input() 属性，可以理解为这个新创建的 HTML 元素的属性 -->
+<!-- 也可以写成
+  <app-scrollable-tab
+    backgroundColor="yellow"
+    titleColor="blue"
+    titleActiveColor="red"
+    indicatorColor="green"
+  >
+  </app-scrollable-tab>
+  或者中括号写法 -- 推荐这种写法，因为 IDE 会提示
+  <app-scrollable-tab
+    [backgroundColor]="'yellow'"
+    [titleColor]="'blue'"
+    [titleActiveColor]="'red'"
+    [indicatorColor]="'green'">
+  </app-scrollable-tab>
+  小括号进行事件绑定，也就是绑定我们在 ScrollableTabComponent 定义的 @Output() 属性
+ -->
+<app-scrollable-tab [tabItems]="tabs" (tabSelected)="handleTabSelected($event)">
+</app-scrollable-tab>
