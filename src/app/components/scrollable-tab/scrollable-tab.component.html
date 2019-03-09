@@ -1,0 +1,19 @@
+<ul>
+  <!-- ngFor 指令是一个结构型指令，会在以所在的宿主节点为模版，循环创建节点 -->
+  <!-- topMenus 是定义在组件中的一个数组，而对数组中的每一个元素赋值给 menu 这个变量 -->
+  <!-- index 是这个数组的索引，如果需要时，可以定义一个变量取得这个索引值 -->
+  <li *ngFor="let menu of topMenus; let i = index" class="menu-item">
+    <!-- 使用双花括号表达式 -->
+    <!-- [class.classname]="判断表达式" 是在应用单个 class 时的常用技巧 -->
+    <!-- 使用方括号 [] 是数据绑定的语法糖，如果带方括号，等号后面就是一个对象 -->
+    <!-- 不使用方括号，等号后面 Angular 认为是一个字符串，但如果我们此时在等号后使用 {{}} 就是和方括号等效的 -->
+    <!-- 圆括号 () 用于事件绑定，等号后可以接表达式也可以是一个定义在类中的函数 -->
+    <a href="#" [class.active]="selectedIndex === i" (click)="selectMenu(i)">
+      {{ menu.title }}
+    </a>
+    <!-- 我们可以按之前的做法写成动态绑定样式，也能一样实现效果，但这种写法会生成一些无用 span 节点 -->
+    <!-- <span [class.indicator]="selectedIndex === i"></span> -->
+    <!-- ngIf 指令用于条件判断是否渲染改元素 -->
+    <span class="indicator" *ngIf="selectedIndex === i"></span>
+  </li>
+</ul>
