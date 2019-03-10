@@ -20,3 +20,9 @@
  -->
 <app-scrollable-tab [tabItems]="tabs" (tabSelected)="handleTabSelected($event)">
 </app-scrollable-tab>
+<app-image-slider
+  [sliders]="imageSliders"
+  [height]="'200px'"
+  [intervalBySeconds]="3"
+>
+</app-image-slider>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TabItem } from './components';
+import { TabItem, ImageSlider } from './components';
 
 @Component({
   selector: 'app-root',
@@ -75,6 +75,38 @@ export class AppComponent {
     {
       title: '家具',
       link: ''
+    }
+  ];
+  imageSliders: ImageSlider[] = [
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/morning-jogging-picture-id497687118',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/listening-the-music-picture-id508949258',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/pretty-young-teenage-girl-relaxing-on-a-grass-picture-id521982322',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/beautiful-women-working-out-in-gym-picture-id623680490',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/jogging-with-my-best-friend-picture-id850045040',
+      link: '',
+      caption: ''
     }
   ];
   handleTabSelected(tabItem: TabItem) {

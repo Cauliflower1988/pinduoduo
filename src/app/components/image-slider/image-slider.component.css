@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.container .image-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  /* 滚动吸附 */
+  scroll-snap-type: x mandatory;
+}
+.container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* 对齐模式 */
+  scroll-snap-align: start;
+}
+/* 图片位置指示器，以绝对定位固定在图片层底部 */
+.nav-section {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  /* 设置成半透明 */
+  opacity: 0.5;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  /* 让圆点在右边 */
+  justify-content: flex-end;
+  align-content: stretch;
+  align-items: stretch;
+}
+.nav-section .slide-button {
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  background: white;
+  text-decoration: none;
+  /* 以 border-radius 画出指示器的圆点 */
+  border-radius: 50%;
+  margin: 5px;
+}
+.nav-section .slide-button-select {
+  background: red;
+}
+::-webkit-scrollbar {
+  display: none;
+}

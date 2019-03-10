@@ -1,0 +1,20 @@
+<div class="container" [ngStyle]="{ height: height }">
+  <!-- #xxx 是给出宿主元素的引用名，既可以在 ts 中使用 @ViewChild 得到，也可以在页面其它部分直接使用 -->
+  <div class="image-slider" (scroll)="handleScroll($event)" #imageSilder>
+    <img
+      *ngFor="let slider of sliders; let idx = index"
+      [src]="slider.imgUrl"
+      [alt]="slider.caption"
+    />
+  </div>
+  <div class="nav-section">
+    <!-- ngClass 和 ngStyle 的用法类似，只不过是进行样式类的绑定 -->
+    <span
+      *ngFor="let _ of sliders; let idx = index"
+      class="slide-button"
+      [ngClass]="{ 'slide-button-select': idx === selectedIndex }"
+      (click)="selected(idx)"
+    >
+    </span>
+  </div>
+</div>
