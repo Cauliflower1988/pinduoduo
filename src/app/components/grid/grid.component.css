@@ -1,0 +1,23 @@
+.grid-container {
+  padding: 5px 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.underline {
+  width: 20%;
+  height: 2px;
+  background-color: lightgray;
+  margin: 0 auto;
+}
+.underline > .highlight {
+  width: 50%;
+  height: 2px;
+  padding: 0;
+  background-color: red;
+}

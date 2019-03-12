@@ -1,0 +1,13 @@
+<div
+  class="grid-container"
+  [ngStyle]="{
+    'max-width': maxWidth,
+    'grid-template-columns': templateColumns
+  }"
+  (scroll)="handleScroll($event)"
+>
+  <ng-content select="[appGridItem]"></ng-content>
+</div>
+<div class="underline" *ngIf="displayScrollIndicator">
+  <div class="highlight" [ngStyle]="{ margin: sliderMargin }"></div>
+</div>

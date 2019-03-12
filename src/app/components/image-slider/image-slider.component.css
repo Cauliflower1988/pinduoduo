@@ -34,8 +34,8 @@
 }
 .nav-section .slide-button {
   display: inline-flex;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   background: white;
   text-decoration: none;
   /* 以 border-radius 画出指示器的圆点 */

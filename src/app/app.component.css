@@ -1,0 +1,9 @@
+img {
+  width: 2rem;
+  height: 2rem;
+}
+.title {
+  width: 4rem;
+  text-align: center;
+  font-size: 0.5rem;
+}
