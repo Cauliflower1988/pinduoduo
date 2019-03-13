@@ -18,16 +18,16 @@
   </app-scrollable-tab>
   小括号进行事件绑定，也就是绑定我们在 ScrollableTabComponent 定义的 @Output() 属性
  -->
+<app-scrollable-tab
+  [tabItems]="tabs"
+  [backgroundColor]="'#fff'"
+  [indicatorColor]="'red'"
+  [titleColor]="'darkgray'"
+  [titleActiveColor]="'red'"
+  (tabSelected)="handleTabSelected($event)"
+>
+</app-scrollable-tab>
 <main>
-  <app-scrollable-tab
-    [tabItems]="tabs"
-    [backgroundColor]="'#fff'"
-    [indicatorColor]="'red'"
-    [titleColor]="'darkgray'"
-    [titleActiveColor]="'red'"
-    (tabSelected)="handleTabSelected($event)"
-  >
-  </app-scrollable-tab>
   <app-image-slider
     [sliders]="imageSliders"
     [height]="'150px'"
@@ -45,5 +45,9 @@
       <span appGridItemTitle="0.6rem" class="title">{{ item.title }}</span>
     </span>
   </app-grid>
+  <div class="products-container">
+    <app-product-card *ngFor="let product of products" [product]="product">
+    </app-product-card>
+  </div>
 </main>
 <app-footer></app-footer>

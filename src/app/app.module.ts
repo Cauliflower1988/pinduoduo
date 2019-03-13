@@ -10,7 +10,10 @@ import {
   GridItemDirective,
   GridItemImageDirective,
   GridItemTitleDirective,
-  FooterComponent
+  FooterComponent,
+  ProductCardComponent,
+  TagDirective,
+  AvatarDirective
 } from './components';
 
 @NgModule({
@@ -22,7 +25,10 @@ import {
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
-    FooterComponent
+    FooterComponent,
+    ProductCardComponent,
+    TagDirective,
+    AvatarDirective
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

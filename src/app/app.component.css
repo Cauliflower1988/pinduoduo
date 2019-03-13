@@ -1,14 +1,30 @@
+/* :host 用于指定宿主样式 */
 :host {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
+/* 让中间部分可滚动，需要计算高度，页面高度减去头部和尾部 */
 main {
   flex-grow: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100% - 7rem);
 }
+/* 头部和尾部固定大小 */
 main,
-app-footer {
+app-footer,
+app-scrollable-tab {
   flex-shrink: 0;
   margin: 0;
   padding: 0;
+}
+/* 响应式布局网格，auto-fill 用来在空间足够时尽可能的填充该位置，minmax 是最小和最大的宽度 */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 0.5rem;
 }

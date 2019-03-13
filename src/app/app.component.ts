@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TabItem, ImageSlider, GridItem } from './components';
+import { TabItem, ImageSlider, GridItem, Product } from './components';
 
 @Component({
   selector: 'app-root',
@@ -189,6 +189,54 @@ export class AppComponent {
       title: '帮帮免费团',
       icon: '/assets/icons/group.png',
       link: ''
+    }
+  ];
+
+  products: Product[] = [
+    {
+      title: '佑诗2018冬季新羊剪绒大衣女水貂绒领中长款羊毛颗粒皮草外套修身',
+      imageUrl:
+        'https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg@750w_1l_50Q.src',
+      tags: ['全场包邮', '不中退款'],
+      price: 18.1,
+      priceDesc: '已拼10万+件',
+      buyerAvatars: [
+        '/assets/avatars/avatar001.png',
+        '/assets/avatars/avatar002.png'
+      ]
+    },
+    {
+      title: 'JEEP/吉普加绒加厚牛仔裤男商务休闲直筒宽松大码中高腰长裤男',
+      imageUrl:
+        'https://t00img.yangkeduo.com/goods/images/2018-11-02/af2d6d1dfd70ab4a7880a2ce4eaaf376.jpeg@750w_1l_50Q.src',
+      tags: ['极速退款', '品牌特卖'],
+      price: 266,
+      priceDesc: '已拼10万+件',
+      buyerAvatars: [
+        '/assets/avatars/avatar002.png',
+        '/assets/avatars/avatar005.png'
+      ]
+    },
+    {
+      title: '【领券立减 】三只松鼠坚果干果组合655/1105g多规格夏威夷碧根果',
+      imageUrl:
+        'https://t00img.yangkeduo.com/goods/images/2019-01-22/bd4bb40145fb2e858841025b0e3c90f1.jpeg@750w_1l_50Q.src',
+      tags: ['全场包邮', '限时秒杀'],
+      price: 49.9,
+      priceDesc: '已拼7932件',
+      buyerAvatars: [
+        '/assets/avatars/avatar004.png',
+        '/assets/avatars/avatar005.png'
+      ]
+    },
+    {
+      title: '心相印抽纸批发300张茶香整箱实惠家用18包餐巾卫生纸家庭装纸巾',
+      imageUrl:
+        'https://t11img.yangkeduo.com/images/2018-04-14/040d508d3f70610bb14d542a24ab806d.jpeg@750w_1l_50Q.src',
+      tags: ['极速退款', '满54返3'],
+      price: 39.8,
+      priceDesc: '已拼2032件',
+      buyerAvatars: ['/assets/avatars/avatar003.png']
     }
   ];
   handleTabSelected(tabItem: TabItem) {

@@ -1,0 +1,62 @@
+.container {
+  background-color: #fff;
+  display: grid;
+  /* minmax 表示最小和最大值，fr 这个单位就是如果有剩余空间就加入该列的宽度 */
+  grid-template-columns: minmax(40%, 1fr) minmax(60%, 1fr);
+  grid-template-rows: minmax(20%, 30%) minmax(30%, 35%) minmax(10%, 15%) minmax(
+      20%,
+      1fr
+    );
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    'image title'
+    'image .'
+    'image tags'
+    'image price';
+  place-content: stretch;
+  place-items: stretch;
+}
+.product-image {
+  grid-area: image;
+  object-fit: cover;
+  width: 9rem;
+  height: 9rem;
+}
+.product-title {
+  grid-area: title;
+}
+.product-tags {
+  grid-area: tags;
+}
+.product-price {
+  grid-area: price;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-areas: 'price-detail price-desc price-avatar';
+  place-content: stretch;
+  place-items: center;
+}
+.price-section {
+  color: #d24749;
+  grid-area: price-detail;
+  margin: 0 1rem;
+}
+.price {
+  display: inline;
+  font-size: 1.3rem;
+  padding: 0;
+}
+.price-desc {
+  grid-area: price-desc;
+  color: darkgray;
+  margin: 0;
+  font-size: 0.8rem;
+}
+.price-avatar {
+  grid-area: price-avatar;
+  margin: 0;
+  height: 100%;
+}
+.price-avatar > img {
+  position: relative;
+}
