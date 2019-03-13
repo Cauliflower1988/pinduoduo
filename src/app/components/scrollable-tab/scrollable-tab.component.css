@@ -5,6 +5,7 @@ ul {
   padding: 0;
   /* 支持横向滚动 */
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   /* 使用 FlexBox 布局 */
   display: flex;
   /* 将屏幕剩余空间平均分布于各子元素之间 */
@@ -23,15 +24,9 @@ ul li.tab-item {
   /* 内容不折行显示 */
   white-space: nowrap;
 }
-
 a {
   /* 不显示下划线 */
   text-decoration: none;
-}
-
-/* 不显示滚动条，只对基于 Webkit 内核的浏览器有效 */
-::-webkit-scrollbar {
-  display: none;
 }
 /* 菜单下方的指示器 */
 .indicator {
@@ -39,4 +34,9 @@ a {
   width: 2rem;
   margin: 2px 0px 0px 0px;
   padding: 0;
+}
+/* 不显示滚动条，只对基于 Webkit 内核的浏览器有效 */
+ul::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
 }

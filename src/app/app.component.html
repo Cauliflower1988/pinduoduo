@@ -18,29 +18,32 @@
   </app-scrollable-tab>
   小括号进行事件绑定，也就是绑定我们在 ScrollableTabComponent 定义的 @Output() 属性
  -->
-<app-scrollable-tab
-  [tabItems]="tabs"
-  [backgroundColor]="'#fff'"
-  [indicatorColor]="'red'"
-  [titleColor]="'darkgray'"
-  [titleActiveColor]="'red'"
-  (tabSelected)="handleTabSelected($event)"
->
-</app-scrollable-tab>
-<app-image-slider
-  [sliders]="imageSliders"
-  [height]="'150px'"
-  [intervalBySeconds]="3"
->
-</app-image-slider>
-<app-grid
-  [rows]="2"
-  [cols]="8"
-  [displayCols]="5"
-  [displayScrollIndicator]="true"
->
-  <span appGridItem *ngFor="let item of gridItems">
-    <img appGridItemImage [src]="item.icon" alt="" />
-    <span appGridItemTitle class="title">{{ item.title }}</span>
-  </span>
-</app-grid>
+<main>
+  <app-scrollable-tab
+    [tabItems]="tabs"
+    [backgroundColor]="'#fff'"
+    [indicatorColor]="'red'"
+    [titleColor]="'darkgray'"
+    [titleActiveColor]="'red'"
+    (tabSelected)="handleTabSelected($event)"
+  >
+  </app-scrollable-tab>
+  <app-image-slider
+    [sliders]="imageSliders"
+    [height]="'150px'"
+    [intervalBySeconds]="3"
+  >
+  </app-image-slider>
+  <app-grid
+    [rows]="2"
+    [cols]="8"
+    [displayCols]="5"
+    [displayScrollIndicator]="true"
+  >
+    <span appGridItem *ngFor="let item of gridItems">
+      <img appGridItemImage="2rem" [src]="item.icon" alt="" />
+      <span appGridItemTitle="0.6rem" class="title">{{ item.title }}</span>
+    </span>
+  </app-grid>
+</main>
+<app-footer></app-footer>

@@ -9,7 +9,8 @@ import {
   GridComponent,
   GridItemDirective,
   GridItemImageDirective,
-  GridItemTitleDirective
+  GridItemTitleDirective,
+  FooterComponent
 } from './components';
 
 @NgModule({
@@ -20,7 +21,8 @@ import {
     GridComponent,
     GridItemDirective,
     GridItemImageDirective,
-    GridItemTitleDirective
+    GridItemTitleDirective,
+    FooterComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

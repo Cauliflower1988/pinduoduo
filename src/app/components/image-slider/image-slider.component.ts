@@ -47,9 +47,8 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
    */
   ngAfterViewInit(): void {
     // 自动轮播
-    let count = 0;
     this.intervalId = setInterval(() => {
-      this.selected(this.getIndex(count++));
+      this.selected(this.getIndex(this.selectedIndex + 1));
     }, this.intervalBySeconds * 1000);
   }
   ngOnDestroy(): void {
@@ -75,12 +74,8 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
       ? index % this.sliders.length
       : this.sliders.length - (Math.abs(index) % this.sliders.length);
   }
-  /**
-   * 对于手动进行的滚动，利用滚动距离和全部长度进行计算，确定当前应该在第几个元素
-   * @param ev 滚动事件
-   */
   handleScroll(ev) {
-    const idx = Math.round(ev.target.scrollLeft / (ev.target.scrollWidth / 5));
-    this.selectedIndex = idx;
+    const ratio = ev.target.scrollLeft / (ev.target.scrollWidth / 5);
+    this.selectedIndex = Math.round(ratio);
   }
 }

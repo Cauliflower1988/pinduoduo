@@ -2,12 +2,10 @@
   padding: 5px 0;
   overflow-x: auto;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   display: grid;
   grid-auto-flow: row;
   grid-gap: 0;
-}
-::-webkit-scrollbar {
-  display: none;
 }
 .underline {
   width: 20%;
@@ -20,4 +18,7 @@
   height: 2px;
   padding: 0;
   background-color: red;
+}
+::-webkit-scrollbar {
+  display: none;
 }

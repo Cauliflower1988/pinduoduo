@@ -79,11 +79,15 @@ export class GridItemDirective {
 @Directive({
   selector: '[appGridItemImage]'
 })
-export class GridItemImageDirective {
-  @Input() appGridItemImage = true;
-  constructor(private elr: ElementRef, private renderer: Renderer2) {
+export class GridItemImageDirective implements OnInit {
+  @Input() appGridItemImage = '2rem';
+  constructor(private elr: ElementRef, private renderer: Renderer2) {}
+
+  ngOnInit(): void {
     // 声明自己占据模版中的 image 区块
     this.setStyle('grid-area', 'image');
+    this.setStyle('width', this.appGridItemImage);
+    this.setStyle('height', this.appGridItemImage);
     this.setStyle('object-fit', 'cover');
   }
 
@@ -95,11 +99,13 @@ export class GridItemImageDirective {
 @Directive({
   selector: '[appGridItemTitle]'
 })
-export class GridItemTitleDirective {
-  @Input() appGridItemTitle = true;
-  constructor(private elr: ElementRef, private renderer: Renderer2) {
+export class GridItemTitleDirective implements OnInit {
+  @Input() appGridItemTitle = '0.5rem';
+  constructor(private elr: ElementRef, private renderer: Renderer2) {}
+  ngOnInit(): void {
     // 声明自己占据模版中的 title 区块
     this.setStyle('grid-area', 'title');
+    this.setStyle('font-size', this.appGridItemTitle);
   }
 
   private setStyle(styleName: string, styleValue: string | number) {

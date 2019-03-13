@@ -6,9 +6,10 @@
 .container .image-slider {
   display: flex;
   overflow-x: scroll;
-  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   /* 滚动吸附 */
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 .container img {
   object-fit: cover;
