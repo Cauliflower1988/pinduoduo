@@ -14,45 +14,42 @@ export interface GridItem {
 }
 
 @Component({
-  selector: 'app-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.css']
+  selector: 'app-horizontal-grid',
+  templateUrl: './horizontal-grid.component.html',
+  styleUrls: ['./horizontal-grid.component.css']
 })
-export class GridComponent implements OnInit {
+export class HorizontalGridComponent implements OnInit {
   @Input() rows = 1;
-  @Input() cols = 1;
   @Input() displayCols = 1;
-  @Input() displayScrollIndicator = false;
+  @Input() itemWidth = 4;
+  @Input() itemHeight = 4;
+  @Input() scrollable = true;
   sliderMargin = '0';
   constructor() {}
 
   ngOnInit() {}
-
-  /**
-   * 计算容器最大宽度：总列数 / 可见显示列数 的百分数
-   */
-  get maxWidth() {
-    return `${(this.cols * 100) / this.displayCols}%`;
+  /* 响应式布局网格，auto-fill 用来在空间足够时尽可能的填充该位置，minmax 是最小和最大的宽度 */
+  get templateRows() {
+    return `repeat(${this.rows}, ${this.itemHeight}rem)`;
   }
   /**
    * CSS Grid Layout 的模版列表达式
    */
   get templateColumns() {
-    return `repeat(${this.cols}, ${100 / this.displayCols}%)`;
+    return `repeat(auto-fit, minmax(${this.itemWidth}rem, 1fr))`;
   }
   /**
    * 处理滚动事件，更新 sliderMargin 以达成滚动指示器位置的刷新
    * @param ev 滚动事件
    */
   handleScroll(ev) {
-    if (!this.displayScrollIndicator) {
+    if (!this.scrollable) {
       return;
     }
     ev.preventDefault();
     ev.stopPropagation();
-    this.sliderMargin = `0 ${(50 * ev.target.scrollLeft) /
-      ev.target.scrollWidth /
-      (1 - this.displayCols / this.cols)}%`;
+    this.sliderMargin = `0 ${(100 * ev.target.scrollLeft) /
+      ev.target.scrollWidth}%`;
   }
 }
 /**
@@ -69,6 +66,7 @@ export class GridItemDirective {
     // 给出网格的模版，默认情况下是一个堆叠的布局，给出一个网格的两个构成部分的命名: image 和 title
     this.setStyle('grid-template-areas', `'image' 'title'`);
     this.setStyle('place-items', 'center');
+    this.setStyle('width', '5rem');
   }
 
   private setStyle(styleName: string, styleValue: string | number) {

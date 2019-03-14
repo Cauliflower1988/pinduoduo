@@ -1,11 +1,14 @@
 .grid-container {
+  background-color: #fff;
   padding: 5px 0;
-  overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   display: grid;
-  grid-auto-flow: row;
-  grid-gap: 0;
+  place-content: stretch;
+  place-items: center;
+  grid-gap: 0.4rem;
+  grid-auto-flow: column;
+  overflow-y: hidden;
 }
 .underline {
   width: 20%;
@@ -19,6 +22,6 @@
   padding: 0;
   background-color: red;
 }
-::-webkit-scrollbar {
-  display: none;
+.grid-container::-webkit-scrollbar {
+  display: none !important;
 }

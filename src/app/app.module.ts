@@ -6,14 +6,15 @@ import { AppComponent } from './app.component';
 import {
   ScrollableTabComponent,
   ImageSliderComponent,
-  GridComponent,
+  HorizontalGridComponent,
   GridItemDirective,
   GridItemImageDirective,
   GridItemTitleDirective,
   FooterComponent,
   ProductCardComponent,
   TagDirective,
-  AvatarDirective
+  AvatarDirective,
+  VerticalGridComponent
 } from './components';
 
 @NgModule({
@@ -21,14 +22,15 @@ import {
     AppComponent,
     ScrollableTabComponent,
     ImageSliderComponent,
-    GridComponent,
+    HorizontalGridComponent,
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
     FooterComponent,
     ProductCardComponent,
     TagDirective,
-    AvatarDirective
+    AvatarDirective,
+    VerticalGridComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],
