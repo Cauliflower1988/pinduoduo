@@ -18,31 +18,31 @@ export class FooterComponent implements OnInit {
     {
       title: '首页',
       icon: '/assets/tabs/home.png',
-      link: '',
+      link: 'home',
       selectedIcon: '/assets/tabs/home_selected.png'
     },
     {
       title: '推荐',
       icon: '/assets/tabs/recommend.png',
-      link: '',
+      link: 'recommend',
       selectedIcon: '/assets/tabs/recommend_selected.png'
     },
     {
       title: '分类',
       icon: '/assets/tabs/category.png',
-      link: '',
+      link: 'category',
       selectedIcon: '/assets/tabs/category_selected.png'
     },
     {
       title: '聊天',
       icon: '/assets/tabs/chat.png',
-      link: '',
+      link: 'chat',
       selectedIcon: '/assets/tabs/chat_selected.png'
     },
     {
       title: '个人中心',
       icon: '/assets/tabs/my.png',
-      link: '',
+      link: 'my',
       selectedIcon: '/assets/tabs/my_selected.png'
     }
   ];
