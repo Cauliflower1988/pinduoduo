@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 interface TabItem {
   title: string;
@@ -13,6 +13,7 @@ interface TabItem {
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  @Output() tabSelected = new EventEmitter<TabItem>();
   tabItems: TabItem[] = [
     {
       title: '首页',
@@ -52,5 +53,6 @@ export class FooterComponent implements OnInit {
 
   toggleSelected(idx: number) {
     this.selectedIndex = idx;
+    this.tabSelected.emit(this.tabItems[this.selectedIndex]);
   }
 }
