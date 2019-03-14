@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TabItem, ImageSlider, GridItem, Product } from './components';
+import { TabItem, ImageSlider, GridItem, Product } from './shared';
 
 @Component({
   selector: 'app-root',
