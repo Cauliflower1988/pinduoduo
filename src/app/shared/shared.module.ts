@@ -11,7 +11,8 @@ import {
   ProductCardComponent,
   TagDirective,
   AvatarDirective,
-  VerticalGridComponent
+  VerticalGridComponent,
+  ProductTileComponent
 } from './components';
 
 const COMPONENTS = [
@@ -23,6 +24,7 @@ const COMPONENTS = [
   GridItemTitleDirective,
   FooterComponent,
   ProductCardComponent,
+  ProductTileComponent,
   TagDirective,
   AvatarDirective,
   VerticalGridComponent

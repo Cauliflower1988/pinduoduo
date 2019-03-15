@@ -23,6 +23,7 @@
 }
 .product-title {
   grid-area: title;
+  width: 100%;
 }
 .product-tags {
   grid-area: tags;

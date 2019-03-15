@@ -1,0 +1,18 @@
+<div class="container">
+  <img class="product-image" [src]="product.imageUrl" [alt]="product.title" />
+  <div class="product-title">
+    {{ product.title | slice: 0:13 }}
+  </div>
+  <div>
+    <span appTag *ngFor="let tag of product.tags"> {{ tag }} </span>
+  </div>
+  <div class="product-price">
+    <span class="price-section">
+      <h3 class="price">&yen;{{ product.price }}</h3>
+    </span>
+    <span class="price-desc"> {{ product.priceDesc }} </span>
+    <span class="price-more">
+      <span>发现</span>
+    </span>
+  </div>
+</div>

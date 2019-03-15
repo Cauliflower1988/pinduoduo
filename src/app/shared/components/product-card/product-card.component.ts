@@ -44,7 +44,7 @@ export class TagDirective implements OnInit {
     );
     this.renderer.setStyle(this.elf.nativeElement, 'color', this.appTagColor);
     this.renderer.setStyle(this.elf.nativeElement, 'margin', '0 0.4rem');
-    this.renderer.setStyle(this.elf.nativeElement, 'padding', '0 0.3rem');
+    this.renderer.setStyle(this.elf.nativeElement, 'padding', '0');
     this.renderer.setStyle(
       this.elf.nativeElement,
       'font-size',

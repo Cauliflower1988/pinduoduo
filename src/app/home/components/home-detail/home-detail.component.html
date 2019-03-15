@@ -1,0 +1,45 @@
+<ng-container *ngIf="tabContent as tab">
+  <ng-container *ngIf="tab.tabLink === 'hot'; else other">
+    <app-image-slider
+      [sliders]="tab.imageSliders"
+      [height]="'150px'"
+      [intervalBySeconds]="3"
+    >
+    </app-image-slider>
+    <app-horizontal-grid
+      [rows]="2"
+      [displayCols]="5"
+      [scrollable]="true"
+      [itemWidth]="4.3"
+    >
+      <span appGridItem *ngFor="let item of tab.gridItems">
+        <img appGridItemImage="2rem" [src]="item.icon" alt="" />
+        <span appGridItemTitle="0.6rem" class="title">{{ item.title }}</span>
+      </span>
+    </app-horizontal-grid>
+    <div class="ad-container">
+      <img class="ad-image" src="assets/ads/ad001.png" alt="" />
+    </div>
+    <app-vertical-grid [itemHeight]="9" [itemWidth]="23">
+      <app-product-card
+        *ngFor="let product of tab.products"
+        [product]="product"
+      >
+      </app-product-card>
+    </app-vertical-grid>
+  </ng-container>
+</ng-container>
+<ng-template #other>
+  <div class="ad-container" *ngIf="tabContent.ad">
+    <a routerLink=""
+      ><img class="ad-image" [src]="tabContent.ad.imageUrl" alt=""
+    /></a>
+  </div>
+  <app-vertical-grid [itemWidth]="10" [itemHeight]="10" class="grid">
+    <app-product-tile
+      *ngFor="let product of tabContent.products"
+      [product]="product"
+    >
+    </app-product-tile>
+  </app-vertical-grid>
+</ng-template>

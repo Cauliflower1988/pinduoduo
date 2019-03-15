@@ -6,7 +6,6 @@
     <!-- 对于比较复杂的样式绑定，可以使用 ngStyle 指令 -->
     <!-- ngStyle 接受的是一个字典对象，其 key 是 css 中的样式属性，value 是想要应用的值 -->
     <a
-      href="#"
       [ngStyle]="{ color: selectedIndex === i ? titleActiveColor : titleColor }"
       (click)="selectTab(i)"
     >
