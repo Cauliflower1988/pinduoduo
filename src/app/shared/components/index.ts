@@ -10,3 +10,4 @@ export * from './product-card';
 export * from './horizontal-grid';
 export * from './vertical-grid';
 export * from './product-tile';
+export * from './dialog';

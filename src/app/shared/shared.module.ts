@@ -12,7 +12,10 @@ import {
   TagDirective,
   AvatarDirective,
   VerticalGridComponent,
-  ProductTileComponent
+  ProductTileComponent,
+  DialogComponent,
+  ProductSpecDialogComponent,
+  CloseDialogDirective
 } from './components';
 
 const COMPONENTS = [
@@ -27,13 +30,15 @@ const COMPONENTS = [
   ProductTileComponent,
   TagDirective,
   AvatarDirective,
-  VerticalGridComponent
+  VerticalGridComponent,
+  DialogComponent,
+  ProductSpecDialogComponent,
+  CloseDialogDirective
 ];
 
 @NgModule({
   declarations: COMPONENTS,
   imports: [CommonModule],
-  exports: [...COMPONENTS, CommonModule],
-  providers: []
+  exports: [...COMPONENTS, CommonModule]
 })
 export class SharedModule {}
