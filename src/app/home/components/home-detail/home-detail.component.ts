@@ -3,7 +3,7 @@ import { TabContent } from '../home-container';
 import { ImageSlider, GridItem, Product } from 'src/app/shared';
 import { ActivatedRoute } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
-
+import { getShuffledArr } from 'src/app/utils';
 @Component({
   selector: 'app-home-detail',
   templateUrl: './home-detail.component.html',
@@ -12,32 +12,27 @@ import { filter, map } from 'rxjs/operators';
 export class HomeDetailComponent implements OnInit {
   imageSliders: ImageSlider[] = [
     {
-      imgUrl:
-        'https://media.istockphoto.com/photos/morning-jogging-picture-id497687118',
+      imgUrl: 'assets/banners/banner001.png',
       link: '',
       caption: ''
     },
     {
-      imgUrl:
-        'https://media.istockphoto.com/photos/listening-the-music-picture-id508949258',
+      imgUrl: 'assets/banners/banner002.png',
       link: '',
       caption: ''
     },
     {
-      imgUrl:
-        'https://media.istockphoto.com/photos/pretty-young-teenage-girl-relaxing-on-a-grass-picture-id521982322',
+      imgUrl: 'assets/banners/banner003.png',
       link: '',
       caption: ''
     },
     {
-      imgUrl:
-        'https://media.istockphoto.com/photos/beautiful-women-working-out-in-gym-picture-id623680490',
+      imgUrl: 'assets/banners/banner004.png',
       link: '',
       caption: ''
     },
     {
-      imgUrl:
-        'https://media.istockphoto.com/photos/jogging-with-my-best-friend-picture-id850045040',
+      imgUrl: 'assets/banners/banner005.png',
       link: '',
       caption: ''
     }
@@ -170,24 +165,186 @@ export class HomeDetailComponent implements OnInit {
       price: 39.8,
       priceDesc: '已拼2032件',
       buyerAvatars: ['/assets/avatars/avatar003.png']
-    }
-  ];
-  dataSets: TabContent[] = [
-    {
-      products: this.products,
-      imageSliders: this.imageSliders,
-      gridItems: this.gridItems,
-      tabLink: 'hot'
     },
     {
-      products: this.products,
-      tabLink: 'men'
+      title: '【水滴屏】vivo X23幻彩版水滴屏屏幕指纹AI双摄游戏手机',
+      imageUrl:
+        'http://t00img.yangkeduo.com/goods/images/2019-02-14/d4ad74ccd869a1999e151ec61981aa28.jpeg',
+      tags: ['全场包邮', '不中退款'],
+      price: 39.8,
+      priceDesc: '已拼804件',
+      buyerAvatars: ['/assets/avatars/avatar003.png']
+    },
+    {
+      title: '【华为官方正品】华为P20 全面屏 徕卡三摄AI摄影大师',
+      imageUrl:
+        'http://t00img.yangkeduo.com/goods/images/2018-09-22/abb7b6cf519ebd0e4c799a323ba730fd.jpeg',
+      tags: ['全场包邮', '不中退款'],
+      price: 4299,
+      priceDesc: '已拼804件',
+      buyerAvatars: ['/assets/avatars/avatar003.png']
+    },
+    {
+      title: '【买二送一买三送二】冰箱收纳盒冷冻食品水果保鲜盒密封储物盒',
+      imageUrl:
+        'http://t00img.yangkeduo.com/goods/images/2018-08-14/8bfe9eb6f8c07b09af878c561554cd65.jpeg',
+      tags: ['极速退款', '满29返2'],
+      price: 9.8,
+      priceDesc: '已拼7.5万件',
+      buyerAvatars: ['/assets/avatars/avatar003.png']
+    },
+    {
+      title:
+        '【全新国行正品带票】iPhone XR 全网通苹果手机 抢券请看详情【预售：3月19日发完】',
+      imageUrl:
+        'http://t00img.yangkeduo.com/goods/images/2019-03-14/a4552f0beb68fee2d453d6520fb6b80a.jpeg',
+      tags: ['限时秒杀', '顺丰包邮'],
+      price: 5340,
+      priceDesc: '已拼7.1万件',
+      buyerAvatars: ['/assets/avatars/avatar003.png']
     }
   ];
+  dataSets: TabContent[] = [];
   tabContent: TabContent | null = null;
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+    this.dataSets = [
+      {
+        products: this.products,
+        imageSliders: this.imageSliders,
+        gridItems: this.gridItems,
+        tabLink: 'hot'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'men'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad003.jpg',
+          link: ''
+        },
+        tabLink: 'department'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad004.png',
+          link: ''
+        },
+        tabLink: 'sports'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad003.jpg',
+          link: ''
+        },
+        tabLink: 'mobile'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'textile'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'food'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'appliance'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'shoes'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'cars'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'fruits'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'computers'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'underwears'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'home'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'baby'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'makeup'
+      },
+      {
+        products: getShuffledArr(this.products),
+        ad: {
+          imageUrl: 'assets/ads/ad002.gif',
+          link: ''
+        },
+        tabLink: 'furnitures'
+      }
+    ];
     this.route.paramMap
       .pipe(
         filter(params => params.has('tabLink')),

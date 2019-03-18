@@ -37,8 +37,15 @@
   width: 100%;
 }
 .price-more {
+  color: darkgray;
   font-size: 0.9rem;
-  width: 100%;
+  text-align: center;
+  width: 3rem;
+  border-style: solid;
+  border-color: lightgray;
+  border-width: 1px;
+  border-top-left-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
 }
 :host {
   display: flex;
