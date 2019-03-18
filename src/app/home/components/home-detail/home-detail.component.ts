@@ -40,82 +40,98 @@ export class HomeDetailComponent implements OnInit {
   gridItems: GridItem[] = [
     {
       title: '限时秒杀',
-      icon: '/assets/icons/countdown.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2018-11-13/298376dd8176f90df743de9f08a756eb.png',
       link: ''
     },
     {
       title: '断码清仓',
-      icon: '/assets/icons/outlet.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2018-12-07/678088ee2500f08a193ea8619bc0ae76.png',
       link: ''
     },
     {
       title: '品牌馆',
-      icon: '/assets/icons/brand.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2019-03-14/a01571d7bde632029c76ad9a298570ec.png',
       link: ''
     },
     {
       title: '多多果园',
-      icon: '/assets/icons/vegetables.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2018-12-03/d21a7598e29ce189a9a57bb234ee4fad.png',
       link: ''
     },
     {
       title: '9块9特卖',
-      icon: '/assets/icons/onsale.png',
+      icon:
+        'http://t01img.yangkeduo.com/images/2018-05-16/d86ceaeaa0bccaeb3b3dee76f64f0192.png',
       link: ''
     },
     {
       title: '助力享免单',
-      icon: '/assets/icons/helpfree.png',
+      icon:
+        'http://t05img.yangkeduo.com/images/2018-05-16/bf18833fa4c298a040fe01f279f6f6ec.png',
       link: ''
     },
     {
       title: '天天领现金',
-      icon: '/assets/icons/cash.png',
+      icon:
+        'http://t10img.yangkeduo.com/images/2018-05-16/712fc1e7f4f7b0572257ef162b5185a9.png',
       link: ''
     },
     {
       title: '1分抽大奖',
-      icon: '/assets/icons/lottery.png',
+      icon:
+        'http://t05img.yangkeduo.com/images/2018-05-04/c71c9acd8b48203a704f6c0951caddc0.png',
       link: ''
     },
     {
       title: '充值中心',
-      icon: '/assets/icons/mobilebill.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2019-02-28/8f319d9b37e3f78438e620469beb557f.png',
       link: ''
     },
     {
       title: '每日好店',
-      icon: '/assets/icons/mall.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2019-01-20/d36b7af30da354cb2c8ad4ea7bd819cd.png',
       link: ''
     },
     {
       title: '现金签到',
-      icon: '/assets/icons/checkin.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2018-12-03/6fffdaa9bdef16e5140d46357293e1fa.gif',
       link: ''
     },
     {
       title: '金猪赚大钱',
-      icon: '/assets/icons/coins.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2019-02-05/1351e256a0319a6885761b937d06d581.png',
       link: ''
     },
     {
       title: '电器城',
-      icon: '/assets/icons/electronics.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2018-11-26/ee327a5ee7fb7ff76a98cf71be967a20.png',
       link: ''
     },
     {
       title: '爱逛街',
-      icon: '/assets/icons/shopping.png',
+      icon:
+        'http://t03img.yangkeduo.com/images/2018-05-16/a666ac01e718dd06231a722baa6fa935.png',
       link: ''
     },
     {
       title: '砍价免费拿',
-      icon: '/assets/icons/free.png',
+      icon:
+        'http://t00img.yangkeduo.com/goods/images/2018-11-14/4ad66f8d7d28d6237a9f25b9a6d19f3e.png',
       link: ''
     },
     {
       title: '帮帮免费团',
-      icon: '/assets/icons/group.png',
+      icon:
+        'http://t11img.yangkeduo.com/images/2018-04-28/5cfc9925dac860135143921e0f687a7d.png',
       link: ''
     }
   ];
