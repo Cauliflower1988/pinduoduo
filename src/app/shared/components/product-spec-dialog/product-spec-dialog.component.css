@@ -1,0 +1,85 @@
+.close-button {
+  position: fixed;
+  left: calc(100% - 2rem);
+  font-size: 1.2rem;
+}
+.image-container {
+  flex-shrink: 0;
+  height: calc(9rem - 10%);
+}
+.product-image {
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fff;
+}
+.price {
+  position: relative;
+  font-size: 1.3rem;
+  color: red;
+  text-align: start;
+  left: calc(5% + 9rem);
+}
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.2rem;
+}
+.spec {
+  display: flex;
+  flex-wrap: wrap;
+}
+.spec > div {
+  background-color: lightgray;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+}
+.amount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.buttons {
+  display: flex;
+}
+.confirm-button {
+  width: 100%;
+  background-color: red;
+  color: #fff;
+  font-size: 1.3rem;
+  height: 100%;
+}
+.fill-remianing-space {
+  flex: 1;
+}
+.text-align-left {
+  text-align: left;
+}
+.spec .spec-selected {
+  color: #fff;
+  background-color: red;
+}
+.selected-desc {
+  position: relative;
+  left: calc(5% + 9rem);
+  text-align: start;
+  width: calc(95% - 10rem);
+}
+button {
+  border-style: none;
+}
+.count {
+  margin: 0 0.5rem;
+}

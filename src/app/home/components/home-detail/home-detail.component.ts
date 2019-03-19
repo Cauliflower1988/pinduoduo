@@ -89,7 +89,7 @@ export class HomeDetailComponent implements OnInit {
     {
       title: '充值中心',
       icon:
-        'http://t00img.yangkeduo.com/goods/images/2019-02-28/8f319d9b37e3f78438e620469beb557f.png',
+        'http://t00img.yangkeduo.com/goods/images/2018-12-02/68aefda33f6afac045997edd25a3844e.png',
       link: ''
     },
     {
@@ -101,7 +101,7 @@ export class HomeDetailComponent implements OnInit {
     {
       title: '现金签到',
       icon:
-        'http://t00img.yangkeduo.com/goods/images/2018-12-03/6fffdaa9bdef16e5140d46357293e1fa.gif',
+        'http://t00img.yangkeduo.com/goods/images/2018-08-01/f13e2dff54d604518a1db4facd89d300.png',
       link: ''
     },
     {

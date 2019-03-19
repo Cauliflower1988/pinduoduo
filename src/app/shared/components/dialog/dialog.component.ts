@@ -19,49 +19,6 @@ export class DialogComponent implements OnInit {
   ngOnInit(): void {}
 }
 
-@Component({
-  selector: 'app-product-spec-dialog',
-  template: `
-    <app-dialog>
-      <div class="title">{{ title }}</div>
-      <div class="content">This is a test</div>
-      <div class="buttons">
-        <button appCloseDialog class="confirm-button">确定</button>
-      </div>
-    </app-dialog>
-  `,
-  styles: [
-    `
-      .title {
-        color: #000;
-        font-size: 1.3rem;
-        text-align: center;
-      }
-      .content {
-        flex: 1;
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
-      .buttons {
-        display: flex;
-      }
-      .confirm-button {
-        width: 100%;
-        background-color: red;
-        color: #fff;
-        font-size: 1.3rem;
-        height: 100%;
-      }
-    `
-  ]
-})
-export class ProductSpecDialogComponent implements OnInit {
-  @Input() title = '';
-  constructor() {}
-
-  ngOnInit(): void {}
-}
-
 @Directive({
   selector: '[appCloseDialog]'
 })

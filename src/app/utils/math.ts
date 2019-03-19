@@ -11,3 +11,10 @@ export const getShuffledArr = (arr: any[]) => {
   }
   return newArr;
 };
+export const arrayMax = array => {
+  return array.reduce((a, b) => Math.max(a, b));
+};
+
+export const arrayMin = array => {
+  return array.reduce((a, b) => Math.min(a, b));
+};
