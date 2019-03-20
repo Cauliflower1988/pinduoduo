@@ -8,7 +8,11 @@
       [scrollable]="true"
       [itemWidth]="4.3"
     >
-      <span appGridItem *ngFor="let item of tab.gridItems">
+      <span
+        appGridItem
+        *ngFor="let item of tab.gridItems"
+        [routerLink]="['../' + item.link]"
+      >
         <img appGridItemImage="2rem" [src]="item.icon" alt="" />
         <span appGridItemTitle="0.6rem" class="title">{{ item.title }}</span>
       </span>
@@ -36,6 +40,7 @@
     <app-product-tile
       *ngFor="let product of tabContent.products"
       [product]="product"
+      [routerLink]="'/products/' + product.id"
     >
     </app-product-tile>
   </app-vertical-grid>

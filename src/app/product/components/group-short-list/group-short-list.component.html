@@ -1,0 +1,5 @@
+<div class="title">{{ groupOrders.length }} 人在拼单，可直接参与</div>
+<app-group-item
+  *ngFor="let item of groupOrders"
+  [order]="item"
+></app-group-item>

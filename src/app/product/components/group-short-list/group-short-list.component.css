@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.title {
+  margin: 0 1rem;
+  color: darkgray;
+}
