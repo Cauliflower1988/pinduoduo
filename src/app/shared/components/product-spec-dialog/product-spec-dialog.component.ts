@@ -20,7 +20,7 @@ export class ProductSpecDialogComponent implements OnInit {
   // 注意这个 EventEmitter 在很多包里面都有，导入 @angular/core 这个 package 中的
   @Output() specSelected = new EventEmitter();
   selectedSpecIndex = 0;
-  count = 0;
+  count = 1;
   constructor(private dialogService: DialogService) {}
 
   ngOnInit(): void {}

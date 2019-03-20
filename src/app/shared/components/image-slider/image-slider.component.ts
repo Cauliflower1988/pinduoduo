@@ -22,7 +22,7 @@ export interface ImageSlider {
 })
 export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() sliders: ImageSlider[] = [];
-  @Input() height = '200px';
+  @Input() height = '9rem';
   @Input() intervalBySeconds = 2;
   /**
    * 获得页面元素的引用，这里由于是一个原生 HTML 元素 -- div，所以声明类型为 ElementRef
@@ -47,6 +47,9 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
    */
   ngAfterViewInit(): void {
     // 自动轮播
+    if (this.intervalBySeconds <= 0) {
+      return;
+    }
     this.intervalId = setInterval(() => {
       this.selected(this.getIndex(this.selectedIndex + 1));
     }, this.intervalBySeconds * 1000);
@@ -62,7 +65,8 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
     this.renderer.setProperty(
       this.imageSlider.nativeElement,
       'scrollLeft',
-      (idx * this.imageSlider.nativeElement.scrollWidth) / 5
+      // fix bug: 使用数组长度
+      (idx * this.imageSlider.nativeElement.scrollWidth) / this.sliders.length
     );
   }
   /**
@@ -75,7 +79,9 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
       : this.sliders.length - (Math.abs(index) % this.sliders.length);
   }
   handleScroll(ev) {
-    const ratio = ev.target.scrollLeft / (ev.target.scrollWidth / 5);
+    // fix bug: 使用数组长度
+    const ratio =
+      ev.target.scrollLeft / (ev.target.scrollWidth / this.sliders.length);
     this.selectedIndex = Math.round(ratio);
   }
 }

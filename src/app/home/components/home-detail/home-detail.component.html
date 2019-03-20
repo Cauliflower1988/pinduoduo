@@ -1,10 +1,6 @@
 <ng-container *ngIf="tabContent as tab">
   <ng-container *ngIf="tab.tabLink === 'hot'; else other">
-    <app-image-slider
-      [sliders]="tab.imageSliders"
-      [height]="'150px'"
-      [intervalBySeconds]="3"
-    >
+    <app-image-slider [sliders]="tab.imageSliders" [intervalBySeconds]="3">
     </app-image-slider>
     <app-horizontal-grid
       [rows]="2"
@@ -24,6 +20,7 @@
       <app-product-card
         *ngFor="let product of tab.products"
         [product]="product"
+        [routerLink]="'/products/' + product.id"
       >
       </app-product-card>
     </app-vertical-grid>

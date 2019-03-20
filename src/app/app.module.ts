@@ -16,6 +16,7 @@ import { RecommendModule } from './recommend';
 import { ChatModule } from './chat';
 import { MyModule } from './my';
 import { DomService } from './shared/components/dialog/dom.service';
+import { ProductModule } from './product';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { DomService } from './shared/components/dialog/dom.service';
     RecommendModule,
     ChatModule,
     MyModule,
+    ProductModule,
     AppRoutingModule
   ],
   providers: [DomService, DialogService],

@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 
 export interface Product {
+  id: number;
   imageUrl: string;
   title: string;
   tags: string[];

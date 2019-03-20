@@ -26,6 +26,12 @@
     </div>
   </div>
   <div class="buttons">
-    <button class="confirm-button" (click)="handleConfirm()">确定</button>
+    <button
+      class="confirm-button"
+      (click)="handleConfirm()"
+      [ngStyle]="{ 'background-color': count > 0 ? 'red' : 'lightgray' }"
+    >
+      确定
+    </button>
   </div>
 </app-dialog>

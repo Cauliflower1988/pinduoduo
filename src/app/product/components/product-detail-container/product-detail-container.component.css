@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+:host {
+  flex: 1;
+  display: flex;
+}
+.back-button {
+  position: fixed;
+  background-color: #000;
+  opacity: 0.6;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+  left: 1rem;
+  top: 1rem;
+  color: #fff;
+  text-align: center;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.back-button > img {
+  object-fit: contain;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.container .toolbar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.container .content {
+  flex: 1;
+  overflow-y: auto;
+}
+.content .price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-section .price-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+.now-price {
+  font-size: 1.5rem;
+  color: red;
+  margin: 0 0.5rem 0 1rem;
+}
+.list-price {
+  margin: 0 0.5rem 0 0;
+  color: darkgray;
+  text-decoration: line-through;
+}
+.price-section .sales-count {
+  color: darkgray;
+  margin: 0 0.5rem;
+}
+.content .title {
+  font: bold;
+}
+.title h4 {
+  margin: 0 1rem;
+}
+.content .coupon {
+  display: flex;
+  align-items: baseline;
+}
+.coupon .tag {
+  margin: 0.2rem 1rem;
+  padding: 0 0.5rem;
+  background-color: red;
+  color: #fff;
+}
+.coupon .desc {
+  color: darkgray;
+}
+.icon-button img {
+  width: 2rem;
+  height: 2rem;
+}
+.toolbar .icon-button {
+  font-size: 0.8rem;
+  color: darkgray;
+  flex: 1 1 10%;
+}
+.toolbar div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.toolbar .direct-buy {
+  background: #e9aeaa;
+  color: #fff;
+  flex: 1 1 28%;
+}
+.toolbar .group-buy {
+  background: red;
+  color: #fff;
+  flex: 1 1 35%;
+}

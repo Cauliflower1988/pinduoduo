@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="back-button" (click)="handleBack()">
+    <img src="assets/icons/back.png" />
+  </div>
+  <div class="content">
+    <app-image-slider
+      [sliders]="productImages"
+      [height]="'22rem'"
+      [intervalBySeconds]="0"
+    >
+    </app-image-slider>
+    <div class="price-section">
+      <div class="price-wrapper">
+        <div class="now-price">&yen;9.9</div>
+        <div class="list-price">&yen; 19.9</div>
+      </div>
+      <div class="sales-count">已拼1.4万件</div>
+    </div>
+    <div class="title">
+      <h4>迷你小锤子</h4>
+    </div>
+    <div class="coupon">
+      <div class="tag">返现</div>
+      <div class="desc">店铺内消费满39元返2元</div>
+    </div>
+  </div>
+  <div class="toolbar">
+    <div class="icon-button">
+      <img src="/assets/icons/more.png" alt="" />
+      <div>更多</div>
+    </div>
+    <div class="icon-button">
+      <img src="/assets/icons/favorite.png" alt="" />
+      <div>收藏</div>
+    </div>
+    <div class="icon-button">
+      <img src="/assets/icons/customer-service.png" alt="" />
+      <div>客服</div>
+    </div>
+    <div class="direct-buy" (click)="handleDirectBuy()">
+      <div>&yen;19.9</div>
+      <div>直接购买</div>
+    </div>
+    <div class="group-buy" (click)="handleGroupBuy()">
+      <div>&yen;19.9</div>
+      <div>发起拼单</div>
+    </div>
+  </div>
+</div>
