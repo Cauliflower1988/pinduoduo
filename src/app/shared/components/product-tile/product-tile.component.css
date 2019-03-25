@@ -32,17 +32,17 @@
   padding: 0;
 }
 .price-desc {
-  color: darkgray;
+  color: #3f3f3f;
   font-size: 0.7rem;
   width: 100%;
 }
 .price-more {
-  color: darkgray;
+  color: #3f3f3f;
   font-size: 0.9rem;
   text-align: center;
   width: 3rem;
   border-style: solid;
-  border-color: lightgray;
+  border-color: #f5f5f5;
   border-width: 1px;
   border-top-left-radius: 0.9rem;
   border-bottom-left-radius: 0.9rem;

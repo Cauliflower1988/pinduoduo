@@ -47,7 +47,7 @@ export class GroupShortListComponent implements OnInit {
   selector: 'app-group-item',
   template: `
     <div class="item-container">
-      <img appAvatar [src]="order.avatar" />
+      <img appAvatar appAvatarSize="2rem" [src]="order.avatar" />
       <div class="username">{{ order.startBy }}</div>
       <div class="count-down">
         <div>
@@ -82,7 +82,9 @@ export class GroupShortListComponent implements OnInit {
       .group-button {
         background-color: red;
         color: #fff;
-        padding: 0.5rem;
+        font-size: 1.1rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 5px;
       }
       .remaining-number {
         color: red;

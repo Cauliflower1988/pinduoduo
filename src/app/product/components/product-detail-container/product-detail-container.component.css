@@ -53,18 +53,18 @@
 }
 .list-price {
   margin: 0 0.5rem 0 0;
-  color: darkgray;
+  color: #3f3f3f;
   text-decoration: line-through;
 }
 .price-section .sales-count {
-  color: darkgray;
+  color: #3f3f3f;
   margin: 0 0.5rem;
 }
 .content .title {
   font: bold;
 }
 .title h4 {
-  margin: 0 1rem;
+  margin: 0 1.1rem;
 }
 .content .coupon {
   display: flex;
@@ -74,10 +74,11 @@
   margin: 0.2rem 1rem;
   padding: 0 0.5rem;
   background-color: red;
+  border-radius: 4px;
   color: #fff;
 }
 .coupon .desc {
-  color: darkgray;
+  color: #3f3f3f;
 }
 .icon-button img {
   width: 2rem;
@@ -85,7 +86,7 @@
 }
 .toolbar .icon-button {
   font-size: 0.8rem;
-  color: darkgray;
+  color: #3f3f3f;
   flex: 1 1 10%;
 }
 .toolbar div {
@@ -102,4 +103,15 @@
   background: red;
   color: #fff;
   flex: 1 1 35%;
+}
+.group-short-list {
+  padding: 0.4rem 0;
+  background-color: #f5f5f5;
+}
+.guarantee {
+  margin: 1rem;
+}
+.guarantee span {
+  margin: 0.1rem;
+  color: darkgrey;
 }

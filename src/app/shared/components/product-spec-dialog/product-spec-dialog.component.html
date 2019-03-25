@@ -3,7 +3,7 @@
     <img class="product-image" [src]="productImage" />
     <div class="price">
       &yen; {{ priceRange
-      }}<button class="close-button" appCloseDialog>x</button>
+      }}<img class="close-button" appCloseDialog src="assets/icons/close.png" />
     </div>
     <div class="selected-desc">已选择:{{ selectedSpecName }}</div>
   </div>
@@ -20,16 +20,23 @@
     </div>
     <div class="amount">
       <div class="text-align-left fill-remianing-space">数量</div>
-      <button (click)="handleDecrease()">-</button>
+      <div (click)="handleDecrease()" class="button">
+        <img src="assets/icons/remove.png" alt="" />
+      </div>
       <div class="count">{{ count }}</div>
-      <button (click)="handleIncrease()">+</button>
+      <div (click)="handleIncrease()" class="button">
+        <img src="assets/icons/add.png" alt="" />
+      </div>
     </div>
   </div>
   <div class="buttons">
     <button
       class="confirm-button"
       (click)="handleConfirm()"
-      [ngStyle]="{ 'background-color': count > 0 ? 'red' : 'lightgray' }"
+      [ngStyle]="{
+        'background-color':
+          count > 0 && selectedSpecIndex >= 0 ? 'red' : 'darkgray'
+      }"
     >
       确定
     </button>

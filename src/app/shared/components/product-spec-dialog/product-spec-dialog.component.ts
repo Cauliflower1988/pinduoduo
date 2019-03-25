@@ -19,7 +19,7 @@ export class ProductSpecDialogComponent implements OnInit {
   @Input() specs: ProductSpec[] = [];
   // 注意这个 EventEmitter 在很多包里面都有，导入 @angular/core 这个 package 中的
   @Output() specSelected = new EventEmitter();
-  selectedSpecIndex = 0;
+  selectedSpecIndex = -1;
   count = 1;
   constructor(private dialogService: DialogService) {}
 
@@ -32,12 +32,18 @@ export class ProductSpecDialogComponent implements OnInit {
     const prices = this.specs.map(spec => spec.price);
     const min = arrayMin(prices);
     const max = arrayMax(prices);
-    return max === min ? `${max}` : max > min ? `${min}-${max}` : `${min}`;
+    return this.selectedSpecIndex > 0
+      ? `${this.specs[this.selectedSpecIndex].price}`
+      : max === min
+      ? `${max}`
+      : max > min
+      ? `${min}-${max}`
+      : `${min}`;
   }
 
   get productImage() {
     return this.selectedSpecIndex < 0
-      ? ''
+      ? this.specs[0].productImageUrl
       : this.specs[this.selectedSpecIndex].productImageUrl;
   }
 

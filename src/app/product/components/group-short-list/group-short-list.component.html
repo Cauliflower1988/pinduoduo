@@ -1,5 +1,10 @@
-<div class="title">{{ groupOrders.length }} 人在拼单，可直接参与</div>
-<app-group-item
-  *ngFor="let item of groupOrders"
-  [order]="item"
-></app-group-item>
+<div class="container">
+  <div class="title">
+    <span>{{ groupOrders.length }} 人在拼单，可直接参与</span>
+    <span><img src="assets/icons/navigate_next.png" alt=""/></span>
+  </div>
+  <app-group-item
+    *ngFor="let item of groupOrders"
+    [order]="item"
+  ></app-group-item>
+</div>

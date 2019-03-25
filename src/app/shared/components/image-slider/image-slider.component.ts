@@ -22,7 +22,7 @@ export interface ImageSlider {
 })
 export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() sliders: ImageSlider[] = [];
-  @Input() height = '9rem';
+  @Input() height = 'auto';
   @Input() intervalBySeconds = 2;
   /**
    * 获得页面元素的引用，这里由于是一个原生 HTML 元素 -- div，所以声明类型为 ElementRef
