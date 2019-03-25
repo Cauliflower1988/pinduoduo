@@ -32,7 +32,7 @@ export class ProductSpecDialogComponent implements OnInit {
     const prices = this.specs.map(spec => spec.price);
     const min = arrayMin(prices);
     const max = arrayMax(prices);
-    return this.selectedSpecIndex > 0
+    return this.selectedSpecIndex >= 0
       ? `${this.specs[this.selectedSpecIndex].price}`
       : max === min
       ? `${max}`

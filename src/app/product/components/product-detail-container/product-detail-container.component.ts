@@ -5,6 +5,8 @@ import {
   ProductSpecDialogComponent
 } from 'src/app/shared';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
+import { OrderService } from '../../services';
 
 @Component({
   selector: 'app-product-detail-container',
@@ -40,7 +42,9 @@ export class ProductDetailContainerComponent implements OnInit {
   ];
   constructor(
     private location: Location,
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    private router: Router,
+    private orderService: OrderService
   ) {}
 
   ngOnInit() {}
@@ -81,7 +85,11 @@ export class ProductDetailContainerComponent implements OnInit {
     ];
     // 传入 Output，EventEmitter 其实就是一个 Subject
     const specSelected = new EventEmitter();
-    specSelected.subscribe(ev => console.log(ev));
+
+    specSelected.subscribe(ev => {
+      this.orderService.saveItem(ev.spec, ev.count);
+      this.router.navigate([`/orders/confirm`]);
+    });
     this.dialogService.open(ProductSpecDialogComponent, {
       // 如果 key 和 value 是一个名字，直接写就可以
       inputs: { specs },

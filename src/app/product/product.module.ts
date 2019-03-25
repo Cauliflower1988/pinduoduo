@@ -5,15 +5,19 @@ import { SharedModule } from '../shared';
 import {
   ProductDetailContainerComponent,
   GroupShortListComponent,
-  GroupItemComponent
+  GroupItemComponent,
+  ConfirmOrderComponent
 } from './components';
+import { OrderService } from './services';
 
 @NgModule({
   declarations: [
     ProductDetailContainerComponent,
     GroupShortListComponent,
-    GroupItemComponent
+    GroupItemComponent,
+    ConfirmOrderComponent
   ],
-  imports: [SharedModule, ProductRoutingModule]
+  imports: [SharedModule, ProductRoutingModule],
+  providers: [OrderService]
 })
 export class ProductModule {}
