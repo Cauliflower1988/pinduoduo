@@ -15,7 +15,8 @@ import {
   ProductTileComponent,
   DialogComponent,
   ProductSpecDialogComponent,
-  CloseDialogDirective
+  CloseDialogDirective,
+  ProductAmountComponent
 } from './components';
 
 const COMPONENTS = [
@@ -33,7 +34,8 @@ const COMPONENTS = [
   VerticalGridComponent,
   DialogComponent,
   ProductSpecDialogComponent,
-  CloseDialogDirective
+  CloseDialogDirective,
+  ProductAmountComponent
 ];
 
 @NgModule({

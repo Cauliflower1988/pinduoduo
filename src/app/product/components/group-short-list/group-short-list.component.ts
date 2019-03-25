@@ -80,14 +80,14 @@ export class GroupShortListComponent implements OnInit {
         margin: 0 0.2rem;
       }
       .group-button {
-        background-color: red;
+        background-color: #e02f29;
         color: #fff;
         font-size: 1.1rem;
         padding: 0.2rem 0.6rem;
         border-radius: 5px;
       }
       .remaining-number {
-        color: red;
+        color: #e02f29;
       }
     `
   ]

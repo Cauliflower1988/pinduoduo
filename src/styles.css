@@ -7,3 +7,9 @@ app-root {
   font-size: 16px;
   height: 100%;
 }
+.fill-remianing-space {
+  flex: 1;
+}
+.text-align-left {
+  text-align: left;
+}

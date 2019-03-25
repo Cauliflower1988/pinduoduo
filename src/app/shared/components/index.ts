@@ -12,3 +12,4 @@ export * from './vertical-grid';
 export * from './product-tile';
 export * from './dialog';
 export * from './product-spec-dialog';
+export * from './product-amount.component';

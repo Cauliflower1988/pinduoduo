@@ -44,7 +44,7 @@
   margin: 5px;
 }
 .nav-section .slide-button-select {
-  background: red;
+  background: #e02f29;
 }
 /* 不显示滚动条，只对基于 Webkit 内核的浏览器有效 */
 .container .image-slider::-webkit-scrollbar {

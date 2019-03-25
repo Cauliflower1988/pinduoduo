@@ -1,10 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { arrayMin, arrayMax } from 'src/app/utils';
 import { DialogService } from '../dialog';
+import { Product } from '../product-card/product-card.component';
 
 export interface ProductSpec {
   id: number;
-  productId: number;
+  product: Product;
   name: string;
   price: number;
   productImageUrl: string;
@@ -57,17 +58,6 @@ export class ProductSpecDialogComponent implements OnInit {
     this.selectedSpecIndex = idx;
   }
 
-  handleIncrease() {
-    this.count++;
-  }
-
-  handleDecrease() {
-    if (this.count === 0) {
-      return;
-    }
-    this.count--;
-  }
-
   handleConfirm() {
     if (this.selectedSpecIndex < 0 || this.count === 0) {
       return;
@@ -77,5 +67,9 @@ export class ProductSpecDialogComponent implements OnInit {
       count: this.count
     });
     this.dialogService.close();
+  }
+
+  handleAmountChange(count: number) {
+    this.count = count;
   }
 }

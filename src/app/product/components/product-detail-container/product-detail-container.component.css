@@ -26,7 +26,7 @@
 }
 .now-price {
   font-size: 1.5rem;
-  color: red;
+  color: #e02f29;
   margin: 0 0.5rem 0 1rem;
 }
 .list-price {
@@ -51,7 +51,7 @@
 .coupon .tag {
   margin: 0.2rem 1rem;
   padding: 0 0.5rem;
-  background-color: red;
+  background-color: #e02f29;
   border-radius: 4px;
   color: #fff;
 }
@@ -78,7 +78,7 @@
   flex: 1 1 28%;
 }
 .toolbar .group-buy {
-  background: red;
+  background: #e02f29;
   color: #fff;
   flex: 1 1 35%;
 }

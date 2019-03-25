@@ -54,7 +54,19 @@ export class ProductDetailContainerComponent implements OnInit {
     const specs = [
       {
         id: 1,
-        productId: 1,
+        product: {
+          id: 1,
+          title: '佑诗2018冬季新羊剪绒大衣女水貂绒领中长款羊毛颗粒皮草外套修身',
+          imageUrl:
+            'https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg@750w_1l_50Q.src',
+          tags: ['全场包邮', '不中退款'],
+          price: 18.1,
+          priceDesc: '已拼10万+件',
+          buyerAvatars: [
+            '/assets/avatars/avatar001.png',
+            '/assets/avatars/avatar002.png'
+          ]
+        },
         productImageUrl:
           'http://t00img.yangkeduo.com/goods/images/2018-08-14/8bfe9eb6f8c07b09af878c561554cd65.jpeg',
         name: '款式1',
@@ -62,7 +74,19 @@ export class ProductDetailContainerComponent implements OnInit {
       },
       {
         id: 2,
-        productId: 2,
+        product: {
+          id: 1,
+          title: '佑诗2018冬季新羊剪绒大衣女水貂绒领中长款羊毛颗粒皮草外套修身',
+          imageUrl:
+            'https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg@750w_1l_50Q.src',
+          tags: ['全场包邮', '不中退款'],
+          price: 18.1,
+          priceDesc: '已拼10万+件',
+          buyerAvatars: [
+            '/assets/avatars/avatar001.png',
+            '/assets/avatars/avatar002.png'
+          ]
+        },
         productImageUrl:
           'http://t00img.yangkeduo.com/goods/images/2018-08-14/8bfe9eb6f8c07b09af878c561554cd65.jpeg',
         name: '款式2',
@@ -70,7 +94,19 @@ export class ProductDetailContainerComponent implements OnInit {
       },
       {
         id: 3,
-        productId: 3,
+        product: {
+          id: 1,
+          title: '佑诗2018冬季新羊剪绒大衣女水貂绒领中长款羊毛颗粒皮草外套修身',
+          imageUrl:
+            'https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg@750w_1l_50Q.src',
+          tags: ['全场包邮', '不中退款'],
+          price: 18.1,
+          priceDesc: '已拼10万+件',
+          buyerAvatars: [
+            '/assets/avatars/avatar001.png',
+            '/assets/avatars/avatar002.png'
+          ]
+        },
         productImageUrl:
           'http://t00img.yangkeduo.com/goods/images/2018-08-14/8bfe9eb6f8c07b09af878c561554cd65.jpeg',
         name: '超新爆款无敌今天不买明天没有的款式3',

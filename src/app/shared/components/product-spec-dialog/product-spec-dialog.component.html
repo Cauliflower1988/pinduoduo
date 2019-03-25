@@ -18,16 +18,9 @@
         {{ spec.name }}
       </div>
     </div>
-    <div class="amount">
-      <div class="text-align-left fill-remianing-space">数量</div>
-      <div (click)="handleDecrease()" class="button">
-        <img src="assets/icons/remove.png" alt="" />
-      </div>
-      <div class="count">{{ count }}</div>
-      <div (click)="handleIncrease()" class="button">
-        <img src="assets/icons/add.png" alt="" />
-      </div>
-    </div>
+    <app-product-amount
+      (amountChange)="handleAmountChange($event)"
+    ></app-product-amount>
   </div>
   <div class="buttons">
     <button

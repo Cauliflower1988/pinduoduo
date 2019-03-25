@@ -20,7 +20,7 @@
   width: 50%;
   height: 2px;
   padding: 0;
-  background-color: red;
+  background-color: #e02f29;
 }
 .grid-container::-webkit-scrollbar {
   display: none !important;

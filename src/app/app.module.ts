@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import {
   SharedModule,
-  DialogComponent,
   DialogService,
   ProductSpecDialogComponent
 } from './shared';
@@ -17,6 +17,10 @@ import { ChatModule } from './chat';
 import { MyModule } from './my';
 import { DomService } from './shared/components/dialog/dom.service';
 import { ProductModule } from './product';
+
+import localeZh from '@angular/common/locales/zh-Hans';
+
+registerLocaleData(localeZh, 'zh');
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,7 +36,11 @@ import { ProductModule } from './product';
     ProductModule,
     AppRoutingModule
   ],
-  providers: [DomService, DialogService],
+  providers: [
+    DomService,
+    DialogService,
+    { provide: LOCALE_ID, useValue: 'zh-Hans' }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [ProductSpecDialogComponent]
 })
