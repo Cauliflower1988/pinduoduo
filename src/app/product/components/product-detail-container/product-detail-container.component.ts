@@ -4,7 +4,6 @@ import {
   DialogService,
   ProductSpecDialogComponent
 } from 'src/app/shared';
-import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { OrderService } from '../../services';
 
@@ -41,17 +40,12 @@ export class ProductDetailContainerComponent implements OnInit {
     }
   ];
   constructor(
-    private location: Location,
     private dialogService: DialogService,
     private router: Router,
     private orderService: OrderService
   ) {}
 
   ngOnInit() {}
-
-  handleBack() {
-    this.location.back();
-  }
 
   handleDirectBuy() {}
 

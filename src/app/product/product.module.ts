@@ -6,7 +6,8 @@ import {
   ProductDetailContainerComponent,
   GroupShortListComponent,
   GroupItemComponent,
-  ConfirmOrderComponent
+  ConfirmOrderComponent,
+  BackButtonComponent
 } from './components';
 import { OrderService } from './services';
 
@@ -15,7 +16,8 @@ import { OrderService } from './services';
     ProductDetailContainerComponent,
     GroupShortListComponent,
     GroupItemComponent,
-    ConfirmOrderComponent
+    ConfirmOrderComponent,
+    BackButtonComponent
   ],
   imports: [SharedModule, ProductRoutingModule],
   providers: [OrderService]
