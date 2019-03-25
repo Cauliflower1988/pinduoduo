@@ -17,7 +17,7 @@ import { Location } from '@angular/common';
       .back-button {
         position: fixed;
         left: 1rem;
-        top: 1rem;
+        top: 1.2rem;
         color: #fff;
         text-align: center;
         z-index: 2000;

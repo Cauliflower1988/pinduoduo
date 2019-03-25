@@ -44,6 +44,7 @@
       [count]="item.count"
       (amountChange)="handleAmountChange($event)"
     ></app-product-amount>
+    <app-payment [payments]="payments"></app-payment>
   </div>
   <div class="toolbar">
     <div class="total-price">

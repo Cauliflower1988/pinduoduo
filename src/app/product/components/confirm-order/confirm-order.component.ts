@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { OrderService } from '../../services';
 import { Observable, Subscription, Subject, merge, combineLatest } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { ProductSpec } from 'src/app/shared';
+import { Payment } from '../payment';
 
 @Component({
   selector: 'app-confirm-order',
@@ -20,7 +21,26 @@ export class ConfirmOrderComponent implements OnInit, OnDestroy {
    */
   totalPrice$: Observable<number>;
   count$ = new Subject<number>();
+  payments: Payment[] = [];
   ngOnInit() {
+    this.payments = [
+      {
+        id: 1,
+        name: '微信支付',
+        icon: 'assets/icons/wechat.png',
+        desc: '50元以内可免密支付'
+      },
+      {
+        id: 2,
+        name: '支付宝',
+        icon: 'assets/icons/alipay.png'
+      },
+      {
+        id: 3,
+        name: '找微信好友支付',
+        icon: 'assets/icons/friends.png'
+      }
+    ];
     this.item$ = this.orderService.getItem();
     this.subscription = this.item$.subscribe(({ count }: { count: number }) => {
       this.count = count;
