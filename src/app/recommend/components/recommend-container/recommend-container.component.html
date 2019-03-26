@@ -1,3 +1,15 @@
-<p>
-  recommend-container works!
-</p>
+<div *ngIf="tabContent as tab" class="container">
+  <div class="ad-container" *ngIf="tabContent.ad">
+    <a routerLink=""
+      ><img class="ad-image" [src]="tabContent.ad.imageUrl" alt=""
+    /></a>
+  </div>
+  <app-vertical-grid [itemWidth]="10" [itemHeight]="10" class="grid">
+    <app-product-tile
+      *ngFor="let product of tabContent.products"
+      [product]="product"
+      [routerLink]="'/products/' + product.id"
+    >
+    </app-product-tile>
+  </app-vertical-grid>
+</div>
