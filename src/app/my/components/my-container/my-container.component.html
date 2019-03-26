@@ -1,3 +1,51 @@
-<p>
-  my-container works!
-</p>
+<div class="container">
+  <div class="my-info">
+    <img
+      appAvatar
+      appAvatarSize="5rem"
+      src="assets/avatars/avatar001.png"
+      alt=""
+      class="my-avatar"
+    />
+    <div class="my-name">张三 <img src="assets/icons/wechat.png" alt="" /></div>
+    <div class="my-badge">
+      勋章墙 <img src="assets/icons/navigate_next.png" alt="" />
+    </div>
+    <div class="my-cashback">
+      <span><img src="assets/icons/cashback.png" alt="" /> 拼单返现</span>
+    </div>
+    <div class="my-membership">
+      <span><img src="assets/icons/membership.png" alt="" /> 省钱月卡</span>
+    </div>
+  </div>
+  <div class="brand">
+    <span class="title">品牌特卖</span>
+    <span class="detail">自然堂直降</span>
+    <img src="assets/icons/navigate_next.png" alt="" />
+  </div>
+  <div class="order-status">
+    <div class="title">
+      我的订单<span
+        >查看全部<img src="assets/icons/navigate_next.png" alt=""
+      /></span>
+    </div>
+    <app-horizontal-grid [rows]="1" [displayCols]="5" [scrollable]="false">
+      <span appGridItem *ngFor="let item of orderItems; let idx = index">
+        <img [appGridItemImage]="'2rem'" [src]="item.icon" />
+        <span [appGridItemTitle]="'0.8rem'" class="title">{{
+          item.title
+        }}</span>
+      </span>
+    </app-horizontal-grid>
+  </div>
+  <div class="tools">
+    <app-horizontal-grid [rows]="1" [displayCols]="5" [scrollable]="false">
+      <span appGridItem *ngFor="let item of toolsItems; let idx = index">
+        <img [appGridItemImage]="'2rem'" [src]="item.icon" />
+        <span [appGridItemTitle]="'0.8rem'" class="title">{{
+          item.title
+        }}</span>
+      </span>
+    </app-horizontal-grid>
+  </div>
+</div>

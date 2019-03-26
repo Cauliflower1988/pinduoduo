@@ -27,7 +27,7 @@ export class ConfirmOrderComponent implements OnInit, OnDestroy {
       {
         id: 1,
         name: '微信支付',
-        icon: 'assets/icons/wechat.png',
+        icon: 'assets/icons/wechat_pay.png',
         desc: '50元以内可免密支付'
       },
       {
