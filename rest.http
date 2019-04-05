@@ -1,0 +1,41 @@
+@host=http://localhost:3000
+
+###
+GET {{host}}/tabs HTTP/1.1
+
+### 1 这里是 Path Parameter
+GET {{host}}/tabs/1 HTTP/1.1
+
+### link 是 Query Parameter
+GET {{host}}/tabs?link=hot HTTP/1.1
+
+### Request Header, Body 的含义，Header 负责描述此请求，而 Body 承载数据
+### Content-Type 有很多种类型，Rest API 中一般使用 JSON 作为内容格式
+### 比较旧的系统中， application/x-www-form-urlencoded 也是常用形式
+POST {{host}}/tabs HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "不存在",
+  "link": "notexisted"
+}
+
+###
+PUT {{host}}/tabs/18 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "无所谓",
+  "link": "notexisted"
+}
+
+###
+PATCH  {{host}}/tabs/18 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "这是单独的更新"
+}
+
+###
+DELETE {{host}}/tabs/18 HTTP/1.1
