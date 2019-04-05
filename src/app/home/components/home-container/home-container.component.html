@@ -19,7 +19,7 @@
   小括号进行事件绑定，也就是绑定我们在 ScrollableTabComponent 定义的 @Output() 属性
  -->
 <app-scrollable-tab
-  [tabItems]="tabs"
+  [tabItems]="tabs$ | async"
   [backgroundColor]="'#fff'"
   [indicatorColor]="'red'"
   [titleColor]="'#3f3f3f'"
