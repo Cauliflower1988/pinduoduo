@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import {
-  ImageSlider,
+  Banner,
   DialogService,
   ProductSpecDialogComponent
 } from 'src/app/shared';
@@ -13,26 +13,30 @@ import { OrderService } from '../../services';
   styleUrls: ['./product-detail-container.component.css']
 })
 export class ProductDetailContainerComponent implements OnInit {
-  @Input() productImages: ImageSlider[] = [
+  @Input() productImages: Banner[] = [
     {
+      id: 1,
       imgUrl:
         '//img12.360buyimg.com/n1/s450x450_jfs/t1/26699/3/7924/71757/5c6f9006Edab71a55/134ca0101fa57098.jpg',
       caption: '',
       link: ''
     },
     {
+      id: 2,
       imgUrl:
         '//img12.360buyimg.com/n1/s450x450_jfs/t1/7364/18/15399/77922/5c6f9019Efa984fa0/e359aa77e68cb0d0.jpg',
       caption: '',
       link: ''
     },
     {
+      id: 3,
       imgUrl:
         '//img12.360buyimg.com/n1/s450x450_jfs/t1/19314/3/9347/61055/5c7e1569E661f9f1b/35265fb6efe42d5e.jpg',
       caption: '',
       link: ''
     },
     {
+      id: 4,
       imgUrl:
         '//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg',
       caption: '',

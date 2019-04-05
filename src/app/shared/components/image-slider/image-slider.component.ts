@@ -9,7 +9,8 @@ import {
   OnDestroy
 } from '@angular/core';
 
-export interface ImageSlider {
+export interface Banner {
+  id: number;
   imgUrl: string;
   link: string;
   caption: string;
@@ -21,7 +22,7 @@ export interface ImageSlider {
   styleUrls: ['./image-slider.component.css']
 })
 export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
-  @Input() sliders: ImageSlider[] = [];
+  @Input() sliders: Banner[] = [];
   @Input() height = 'auto';
   @Input() intervalBySeconds = 2;
   /**
