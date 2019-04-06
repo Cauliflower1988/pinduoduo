@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { TabItem, Banner, GridItem, Product } from 'src/app/shared';
 import { Observable } from 'rxjs';
+
+import { TabItem, Banner, GridItem, Product } from 'src/app/shared';
+import { HomeService } from '../../services';
 
 /**
  * interface 是类型模版，不可以实例化，而 class 是实例化的
@@ -21,15 +22,11 @@ export class TabContent {
   styleUrls: ['./home-container.component.css']
 })
 export class HomeContainerComponent implements OnInit {
-  // tabs: TabItem[] = [];
   tabs$: Observable<TabItem[]>;
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private service: HomeService) {}
 
   ngOnInit() {
-    // this.http
-    //   .get<TabItem[]>('http://localhost:3000/tabs')
-    //   .subscribe(items => (this.tabs = items));
-    this.tabs$ = this.http.get<TabItem[]>('http://localhost:3000/tabs');
+    this.tabs$ = this.service.getTabs();
   }
 
   handleTabSelected(tabItem: TabItem) {
