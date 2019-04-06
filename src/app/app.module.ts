@@ -12,10 +12,6 @@ import {
 } from './shared';
 import { HomeModule } from './home';
 import { AppComponent } from './app.component';
-import { CategoryModule } from './category';
-import { RecommendModule } from './recommend';
-import { ChatModule } from './chat';
-import { MyModule } from './my';
 import { DomService } from './shared/components/dialog/dom.service';
 import { ProductModule } from './product';
 
@@ -31,10 +27,6 @@ registerLocaleData(localeZh, 'zh');
     HttpClientModule,
     SharedModule,
     HomeModule,
-    CategoryModule,
-    RecommendModule,
-    ChatModule,
-    MyModule,
     ProductModule,
     AppRoutingModule
   ],
