@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 interface TabItem {
   title: string;
@@ -46,7 +46,7 @@ export class FooterComponent implements OnInit {
       selectedIcon: '/assets/tabs/my_selected.png'
     }
   ];
-  selectedIndex = 0;
+  @Input() selectedIndex = 0;
   constructor() {}
 
   ngOnInit() {}
