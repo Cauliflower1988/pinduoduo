@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class VerticalGridComponent implements OnInit {
   @Input() itemWidth = 4;
   @Input() itemHeight = 4;
-  @Input() gripGap = '0.5rem';
+  @Input() gridGap = '0.5rem';
   constructor() {}
 
   ngOnInit() {}
