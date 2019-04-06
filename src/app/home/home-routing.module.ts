@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HomeContainerComponent, HomeDetailComponent } from './components';
+import {
+  HomeContainerComponent,
+  HomeDetailComponent,
+  ChangeDetectionComponent
+} from './components';
 
 const routes: Routes = [
   {
@@ -18,6 +22,10 @@ const routes: Routes = [
         component: HomeDetailComponent
       }
     ]
+  },
+  {
+    path: 'changes',
+    component: ChangeDetectionComponent
   }
 ];
 

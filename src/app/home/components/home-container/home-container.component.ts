@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -19,7 +19,8 @@ export class TabContent {
 @Component({
   selector: 'app-home-container',
   templateUrl: './home-container.component.html',
-  styleUrls: ['./home-container.component.css']
+  styleUrls: ['./home-container.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeContainerComponent implements OnInit {
   tabs$: Observable<TabItem[]>;
