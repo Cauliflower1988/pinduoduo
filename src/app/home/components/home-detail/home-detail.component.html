@@ -1,6 +1,6 @@
-<ng-container *ngIf="tabContent as tab">
-  <ng-container *ngIf="tab.tabLink === 'hot'; else other">
-    <app-image-slider [sliders]="tab.imageSliders" [intervalBySeconds]="3">
+<ng-container *ngIf="(tab$ | async) as tab">
+  <ng-container *ngIf="tab === 'hot'; else other">
+    <app-image-slider [sliders]="banners$ | async" [intervalBySeconds]="3">
     </app-image-slider>
     <app-horizontal-grid
       [rows]="2"
@@ -11,7 +11,7 @@
     >
       <span
         appGridItem
-        *ngFor="let item of tab.gridItems"
+        *ngFor="let item of (channels$ | async)"
         [routerLink]="['../' + item.link]"
       >
         <img appGridItemImage="2rem" [src]="item.icon" alt="" />
@@ -23,7 +23,7 @@
     </div>
     <app-vertical-grid [itemHeight]="9" [itemWidth]="23">
       <app-product-card
-        *ngFor="let product of tab.products"
+        *ngFor="let product of (products$ | async)"
         [product]="product"
         [routerLink]="'/products/' + product.id"
       >
@@ -32,14 +32,12 @@
   </ng-container>
 </ng-container>
 <ng-template #other>
-  <div class="ad-container" *ngIf="tabContent.ad">
-    <a routerLink=""
-      ><img class="ad-image" [src]="tabContent.ad.imageUrl" alt=""
-    /></a>
+  <div class="ad-container" *ngIf="(ad$ | async) as ad">
+    <a routerLink=""><img class="ad-image" [src]="ad.imageUrl" alt=""/></a>
   </div>
   <app-vertical-grid [itemWidth]="10" [itemHeight]="10" class="grid">
     <app-product-tile
-      *ngFor="let product of tabContent.products"
+      *ngFor="let product of (products$ | async)"
       [product]="product"
       [routerLink]="'/products/' + product.id"
     >

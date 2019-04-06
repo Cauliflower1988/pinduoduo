@@ -1,11 +1,9 @@
 .container {
   display: grid;
   /* minmax 表示最小和最大值，fr 这个单位就是如果有剩余空间就加入该列的宽度 */
-  grid-template-columns: minmax(40%, 1fr) minmax(60%, 1fr);
-  grid-template-rows: minmax(20%, 30%) minmax(30%, 35%) minmax(10%, 15%) minmax(
-      20%,
-      1fr
-    );
+  /* 消除 Chrome 中的警告，对于未指定高度的 grid 使用比例的用法 deprecated 了 */
+  grid-template-columns: 9.6rem 1fr;
+  grid-template-rows: 3rem 1fr 1rem 2rem;
   grid-gap: 0.3rem;
   grid-template-areas:
     'image title'
