@@ -440,5 +440,240 @@
         "baby"
       ]
     }
+  ],
+  "productVariants": [
+    {
+      "id": 1,
+      "productId": 1,
+      "name": "款式1",
+      "price": 19.9,
+      "listPrice": 58.9
+    },
+    {
+      "id": 2,
+      "productId": 1,
+      "name": "款式2",
+      "price": 9.9,
+      "listPrice": 38.9
+    },
+    {
+      "id": 3,
+      "productId": 1,
+      "name": "超新爆款无敌今天不买明天没有的款式3",
+      "price": 29.9,
+      "listPrice": 68.9
+    },
+    {
+      "id": 4,
+      "productId": 2,
+      "name": "款式1",
+      "price": 19.9,
+      "listPrice": 58.9
+    },
+    {
+      "id": 5,
+      "productId": 2,
+      "name": "款式2",
+      "price": 9.9,
+      "listPrice": 48.9
+    },
+    {
+      "id": 6,
+      "productId": 2,
+      "name": "超新爆款无敌今天不买明天没有的款式3",
+      "price": 29.9,
+      "listPrice": 88.9
+    },
+    {
+      "id": 7,
+      "productId": 3,
+      "name": "款式1",
+      "price": 19.9,
+      "listPrice": 108.9
+    },
+    {
+      "id": 8,
+      "productId": 3,
+      "name": "款式2",
+      "price": 9.9,
+      "listPrice": 98.9
+    },
+    {
+      "id": 9,
+      "productId": 3,
+      "name": "超新爆款无敌今天不买明天没有的款式3",
+      "price": 29.9,
+      "listPrice": 99.9
+    },
+    {
+      "id": 10,
+      "productId": 4,
+      "name": "款式1",
+      "price": 19.9,
+      "listPrice": 32.9
+    },
+    {
+      "id": 11,
+      "productId": 4,
+      "name": "款式2",
+      "price": 9.9,
+      "listPrice": 45.9
+    },
+    {
+      "id": 12,
+      "productId": 5,
+      "name": "超新爆款无敌今天不买明天没有的款式3",
+      "price": 29.9,
+      "listPrice": 92.9
+    },
+    {
+      "id": 13,
+      "productId": 6,
+      "name": "款式1",
+      "price": 19.9,
+      "listPrice": 77.9
+    },
+    {
+      "id": 14,
+      "productId": 7,
+      "name": "款式2",
+      "price": 9.9,
+      "listPrice": 88.9
+    },
+    {
+      "id": 15,
+      "productId": 8,
+      "name": "超新爆款无敌今天不买明天没有的款式3",
+      "price": 29.9,
+      "listPrice": 32.9
+    }
+  ],
+  "productVariantImages": [
+    {
+      "id": 1,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/26699/3/7924/71757/5c6f9006Edab71a55/134ca0101fa57098.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 1
+    },
+    {
+      "id": 2,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/7364/18/15399/77922/5c6f9019Efa984fa0/e359aa77e68cb0d0.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 1
+    },
+    {
+      "id": 3,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/19314/3/9347/61055/5c7e1569E661f9f1b/35265fb6efe42d5e.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 1
+    },
+    {
+      "id": 4,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 2
+    },
+    {
+      "id": 5,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/26699/3/7924/71757/5c6f9006Edab71a55/134ca0101fa57098.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 3
+    },
+    {
+      "id": 6,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/7364/18/15399/77922/5c6f9019Efa984fa0/e359aa77e68cb0d0.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 4
+    },
+    {
+      "id": 7,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/19314/3/9347/61055/5c7e1569E661f9f1b/35265fb6efe42d5e.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 3
+    },
+    {
+      "id": 8,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 5
+    },
+    {
+      "id": 9,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/26699/3/7924/71757/5c6f9006Edab71a55/134ca0101fa57098.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 6
+    },
+    {
+      "id": 10,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/7364/18/15399/77922/5c6f9019Efa984fa0/e359aa77e68cb0d0.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 7
+    },
+    {
+      "id": 11,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/19314/3/9347/61055/5c7e1569E661f9f1b/35265fb6efe42d5e.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 8
+    },
+    {
+      "id": 12,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 9
+    },
+    {
+      "id": 13,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 10
+    },
+    {
+      "id": 14,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 11
+    },
+    {
+      "id": 15,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 12
+    },
+    {
+      "id": 16,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 13
+    },
+    {
+      "id": 17,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 14
+    },
+    {
+      "id": 18,
+      "imgUrl": "//img12.360buyimg.com/n1/s450x450_jfs/t1/22653/35/7780/37635/5c6f9018E1f245f65/1bf3a246dc59ea88.jpg",
+      "caption": "",
+      "link": "",
+      "productVariantId": 15
+    }
   ]
 }

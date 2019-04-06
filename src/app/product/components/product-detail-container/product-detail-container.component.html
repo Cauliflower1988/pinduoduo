@@ -1,21 +1,27 @@
-<div class="container">
+<div class="container" *ngIf="(variants$ | async) as productVariants">
   <app-back-button></app-back-button>
   <div class="content">
     <app-image-slider
-      [sliders]="productImages"
+      [sliders]="productVariants[selectedIndex].productVariantImages"
       [height]="'22rem'"
       [intervalBySeconds]="0"
     >
     </app-image-slider>
     <div class="price-section">
       <div class="price-wrapper">
-        <div class="now-price">&yen;9.9</div>
-        <div class="list-price">&yen; 19.9</div>
+        <div class="now-price">
+          {{ productVariants[selectedIndex].price | currency: 'CNY' }}
+        </div>
+        <div class="list-price">
+          {{ productVariants[selectedIndex].listPrice | currency: 'CNY' }}
+        </div>
       </div>
-      <div class="sales-count">已拼1.4万件</div>
+      <div class="sales-count">
+        {{ productVariants[selectedIndex].product.priceDesc }}
+      </div>
     </div>
     <div class="title">
-      <h4>迷你小锤子</h4>
+      <h4>{{ productVariants[selectedIndex].name }}</h4>
     </div>
     <div class="coupon">
       <div class="tag">返现</div>
@@ -45,12 +51,14 @@
       <img src="/assets/icons/customer-service.png" alt="" />
       <div>客服</div>
     </div>
-    <div class="direct-buy" (click)="handleDirectBuy()">
-      <div>&yen;19.9</div>
+    <div class="direct-buy" (click)="handleDirectBuy(productVariants)">
+      <div>
+        {{ productVariants[selectedIndex].listPrice | currency: 'CNY' }}
+      </div>
       <div>直接购买</div>
     </div>
-    <div class="group-buy" (click)="handleGroupBuy()">
-      <div>&yen;19.9</div>
+    <div class="group-buy" (click)="handleGroupBuy(productVariants)">
+      <div>{{ productVariants[selectedIndex].price | currency: 'CNY' }}</div>
       <div>发起拼单</div>
     </div>
   </div>

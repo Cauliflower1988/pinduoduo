@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { OrderService } from '../../services';
 import { Observable, Subscription, Subject, merge, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ProductSpec } from 'src/app/shared';
+import { ProductVariant } from 'src/app/shared';
 import { Payment } from '../payment';
 
 @Component({
@@ -53,11 +53,11 @@ export class ConfirmOrderComponent implements OnInit, OnDestroy {
       merge(
         this.count$,
         this.item$.pipe(
-          map((item: { spec: ProductSpec; count: number }) => item.count)
+          map((item: { spec: ProductVariant; count: number }) => item.count)
         )
       ),
       this.item$.pipe(
-        map((item: { spec: ProductSpec; count: number }) => item.spec.price)
+        map((item: { spec: ProductVariant; count: number }) => item.spec.price)
       )
     ).pipe(map(([count, price]) => count * price));
   }

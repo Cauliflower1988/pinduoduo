@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import { ProductSpec } from 'src/app/shared';
+import { ProductVariant } from 'src/app/shared';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class OrderService {
   private storedProductItem = new BehaviorSubject<object | null>(null);
-  constructor() {
+  constructor(private http: HttpClient) {
     const item = localStorage.getItem('latestItem');
     if (item) {
       this.storedProductItem.next(
@@ -15,7 +17,7 @@ export class OrderService {
   }
   createOrder() {}
   getOrder(orderId: number) {}
-  saveItem(spec: ProductSpec, count: number) {
+  saveItem(spec: ProductVariant, count: number) {
     this.storedProductItem.next({ spec, count });
     localStorage.setItem('latestItem', JSON.stringify({ spec, count }));
   }
@@ -25,5 +27,17 @@ export class OrderService {
   clear() {
     this.storedProductItem.next(null);
     localStorage.clear();
+  }
+  getProductVariantsByProductId(productId: string) {
+    return this.http.get<ProductVariant[]>(
+      `${environment.baseUrl}/productVariants`,
+      {
+        params: {
+          _expand: 'product',
+          _embed: 'productVariantImages',
+          productId
+        }
+      }
+    );
   }
 }

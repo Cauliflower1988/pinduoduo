@@ -32,7 +32,11 @@
       <span>追梦运动专营店</span>
     </div>
     <div class="product-bar">
-      <img [src]="item.spec.productImageUrl" alt="" class="product-image" />
+      <img
+        [src]="item.spec.productVariantImages[0].imgUrl"
+        alt=""
+        class="product-image"
+      />
       <span class="product-name">{{ item.spec.product.title }}</span>
       <div class="product-spec">款式：{{ item.spec.name }}</div>
       <div class="product-price">

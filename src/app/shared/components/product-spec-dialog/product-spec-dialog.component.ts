@@ -2,13 +2,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { arrayMin, arrayMax } from 'src/app/utils';
 import { DialogService } from '../dialog';
 import { Product } from '../product-card/product-card.component';
+import { Banner } from '../image-slider';
 
-export interface ProductSpec {
+export interface ProductVariant {
   id: number;
   product: Product;
   name: string;
   price: number;
-  productImageUrl: string;
+  listPrice: number;
+  productVariantImages: Banner[];
 }
 
 @Component({
@@ -17,10 +19,11 @@ export interface ProductSpec {
   styleUrls: ['./product-spec-dialog.component.css']
 })
 export class ProductSpecDialogComponent implements OnInit {
-  @Input() specs: ProductSpec[] = [];
+  @Input() specs: ProductVariant[] = [];
   // 注意这个 EventEmitter 在很多包里面都有，导入 @angular/core 这个 package 中的
-  @Output() specSelected = new EventEmitter();
-  selectedSpecIndex = -1;
+  @Output() formSubmitted = new EventEmitter();
+  @Output() selected = new EventEmitter<number>();
+  @Input() selectedSpecIndex = -1;
   count = 1;
   constructor(private dialogService: DialogService) {}
 
@@ -44,8 +47,8 @@ export class ProductSpecDialogComponent implements OnInit {
 
   get productImage() {
     return this.selectedSpecIndex < 0
-      ? this.specs[0].productImageUrl
-      : this.specs[this.selectedSpecIndex].productImageUrl;
+      ? this.specs[0].product.imageUrl
+      : this.specs[this.selectedSpecIndex].product.imageUrl;
   }
 
   get selectedSpecName() {
@@ -56,13 +59,14 @@ export class ProductSpecDialogComponent implements OnInit {
 
   handleSelection(idx: number) {
     this.selectedSpecIndex = idx;
+    this.selected.emit(this.selectedSpecIndex);
   }
 
   handleConfirm() {
     if (this.selectedSpecIndex < 0 || this.count === 0) {
       return;
     }
-    this.specSelected.emit({
+    this.formSubmitted.emit({
       spec: this.specs[this.selectedSpecIndex],
       count: this.count
     });
