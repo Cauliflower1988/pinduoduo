@@ -1,7 +1,7 @@
 <router-outlet></router-outlet>
 <app-footer
   (tabSelected)="handleTabSelect($event)"
-  [selectedIndex]="selectedIndex"
+  [selectedIndex]="selectedIndex$ | async"
 ></app-footer>
 
 <div id="overlay" class="hidden" (click)="removeDialog()"></div>
