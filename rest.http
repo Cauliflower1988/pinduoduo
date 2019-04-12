@@ -1,4 +1,4 @@
-@host=http://localhost:3000
+@host=http://localhost/api
 
 ###
 GET {{host}}/tabs HTTP/1.1
@@ -60,3 +60,7 @@ GET {{host}}/productVariants HTTP/1.1
   ?_expand=product
   &_embed=productVariantImages
   &productId=7
+
+###
+
+GET http://apis.imooc.com?icode= HTTP/1.1

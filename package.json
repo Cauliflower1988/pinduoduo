@@ -3,15 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently npm:db \"ng serve\"",
+    "start": "ng serve",
     "build": "ng build --aot --build-optimizer --common-chunk --configuration production --vendor-chunk --lazy-modules",
     "gzipper": "gzipper",
-    "http": "concurrently npm:db \"http-server ./dist/pinduoduo -g\"",
+    "http": "http-server ./dist/pinduoduo -g",
     "prod": "npm run build && gzipper --verbose ./dist/pinduoduo && npm run http",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "db": "json-server ./data.json"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
