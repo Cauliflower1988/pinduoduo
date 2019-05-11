@@ -89,31 +89,31 @@
   "banners": [
     {
       "id": 1,
-      "imgUrl": "http://ppqfnsh9s.bkt.clouddn.com/banner001.png",
+      "imgUrl": "http://ngassets.twigcodes.com/banner001.png",
       "link": "",
       "caption": ""
     },
     {
       "id": 2,
-      "imgUrl": "http://ppqfnsh9s.bkt.clouddn.com/banner002.png",
+      "imgUrl": "http://ngassets.twigcodes.com/banner002.png",
       "link": "",
       "caption": ""
     },
     {
       "id": 3,
-      "imgUrl": "http://ppqfnsh9s.bkt.clouddn.com/banner003.png",
+      "imgUrl": "http://ngassets.twigcodes.com/banner003.png",
       "link": "",
       "caption": ""
     },
     {
       "id": 4,
-      "imgUrl": "http://ppqfnsh9s.bkt.clouddn.com/banner004.png",
+      "imgUrl": "http://ngassets.twigcodes.com/banner004.png",
       "link": "",
       "caption": ""
     },
     {
       "id": 5,
-      "imgUrl": "http://ppqfnsh9s.bkt.clouddn.com/banner005.png",
+      "imgUrl": "http://ngassets.twigcodes.com/banner005.png",
       "link": "",
       "caption": ""
     }
@@ -418,17 +418,17 @@
   ],
   "ads": [
     {
-      "imageUrl": "http://ppqfnsh9s.bkt.clouddn.com/ad002.gif",
+      "imageUrl": "http://ngassets.twigcodes.com/ad002.gif",
       "link": "",
       "categories": ["hot", "mobile", "food", "underwears", "furnitures"]
     },
     {
-      "imageUrl": "http://ppqfnsh9s.bkt.clouddn.com/ad003.jpg",
+      "imageUrl": "http://ngassets.twigcodes.com/ad003.jpg",
       "link": "",
       "categories": ["appliance", "department", "cars", "fruits", "underwears"]
     },
     {
-      "imageUrl": "http://ppqfnsh9s.bkt.clouddn.com/ad004.png",
+      "imageUrl": "http://ngassets.twigcodes.com/ad004.png",
       "link": "",
       "categories": [
         "men",

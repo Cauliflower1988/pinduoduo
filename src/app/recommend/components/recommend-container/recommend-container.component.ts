@@ -108,7 +108,7 @@ export class RecommendContainerComponent implements OnInit {
     this.tabContent = {
       products: getShuffledArr(this.products),
       ad: {
-        imageUrl: 'http://ppqfnsh9s.bkt.clouddn.com/ad002.gif',
+        imageUrl: 'http://ngassets.twigcodes.com/ad002.gif',
         link: ''
       },
       tabLink: 'men'

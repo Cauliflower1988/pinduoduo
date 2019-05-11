@@ -29,7 +29,7 @@
         >查看全部<img src="assets/icons/navigate_next.png" alt=""
       /></span>
     </div>
-    <app-horizontal-grid [rows]="1" [displayCols]="5" [scrollable]="false">
+    <app-horizontal-grid [rows]="1" [displayCols]="5" [cols]="5">
       <span appGridItem *ngFor="let item of orderItems; let idx = index">
         <img [appGridItemImage]="'2rem'" [src]="item.icon" />
         <span [appGridItemTitle]="'0.8rem'" class="title">{{
@@ -39,7 +39,7 @@
     </app-horizontal-grid>
   </div>
   <div class="tools">
-    <app-horizontal-grid [rows]="1" [displayCols]="5" [scrollable]="false">
+    <app-horizontal-grid [rows]="1" [displayCols]="5" [cols]="5">
       <span appGridItem *ngFor="let item of toolsItems; let idx = index">
         <img [appGridItemImage]="'2rem'" [src]="item.icon" />
         <span [appGridItemTitle]="'0.8rem'" class="title">{{
