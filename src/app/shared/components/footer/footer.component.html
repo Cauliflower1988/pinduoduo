@@ -1,4 +1,4 @@
-<app-horizontal-grid [rows]="1" [displayCols]="5" [scrollable]="false">
+<app-horizontal-grid [rows]="1" [displayCols]="5" [cols]="5">
   <span appGridItem *ngFor="let item of tabItems; let idx = index">
     <!-- 投影组件的优点此时就体现出来了，对于 img 怎么操作完全交给组件的使用者，而不是封装在 grid 组件中 -->
     <img

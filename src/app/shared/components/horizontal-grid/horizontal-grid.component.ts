@@ -19,24 +19,30 @@ export interface GridItem {
   styleUrls: ['./horizontal-grid.component.css']
 })
 export class HorizontalGridComponent implements OnInit {
-  @Input() rows = 1;
-  @Input() displayCols = 1;
-  @Input() itemWidth = 4;
-  @Input() itemHeight = 4;
-  @Input() scrollable = true;
+  @Input() rows = 2;
+  @Input() cols = 8;
+  @Input() displayCols = 5;
+  @Input() itemWidth = '4rem';
   sliderMargin = '0';
   constructor() {}
 
   ngOnInit() {}
+  /**
+   * get/set 是 TypeScript 中控制属性访问的方式。
+   * 其中 get 也可以实现一个需要动态计算的属性
+   */
+  get scrollable() {
+    return this.cols > this.displayCols;
+  }
   /* 响应式布局网格，auto-fill 用来在空间足够时尽可能的填充该位置，minmax 是最小和最大的宽度 */
   get templateRows() {
-    return `repeat(${this.rows}, ${this.itemHeight}rem)`;
+    return `minmax(${this.itemWidth}, auto)`;
   }
   /**
    * CSS Grid Layout 的模版列表达式
    */
   get templateColumns() {
-    return `repeat(auto-fit, minmax(${this.itemWidth}rem, 1fr))`;
+    return `repeat(${this.cols}, 1fr)`;
   }
   /**
    * 处理滚动事件，更新 sliderMargin 以达成滚动指示器位置的刷新
@@ -66,7 +72,7 @@ export class GridItemDirective {
     // 给出网格的模版，默认情况下是一个堆叠的布局，给出一个网格的两个构成部分的命名: image 和 title
     this.setStyle('grid-template-areas', `'image' 'title'`);
     this.setStyle('place-items', 'center');
-    this.setStyle('width', '5rem');
+    this.setStyle('width', '4.3rem');
   }
 
   private setStyle(styleName: string, styleValue: string | number) {

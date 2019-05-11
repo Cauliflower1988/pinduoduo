@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { TabItem, DialogService } from './shared';
 import { filter, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router, private dialogService: DialogService) {}
+  constructor(private router: Router, private dialogService: DialogService) { }
   selectedIndex$: Observable<number>;
   ngOnInit(): void {
     this.selectedIndex$ = this.router.events.pipe(
@@ -32,11 +33,11 @@ export class AppComponent implements OnInit {
     return tab === 'home'
       ? 0
       : tab === 'recommend'
-      ? 1
-      : tab === 'category'
-      ? 2
-      : tab === 'chat'
-      ? 3
-      : 4;
+        ? 1
+        : tab === 'category'
+          ? 2
+          : tab === 'chat'
+            ? 3
+            : 4;
   }
 }
